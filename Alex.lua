@@ -586,7 +586,7 @@ Chat_Type = 'GroupBot'
 end
 end
 if database:get(bot_id.."Alex:Alex:Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == "الغاء" or text == "الغاء ✖" then   
+if text == "الغاء" or text == "⌔︙ الغاء ." then   
 send(msg.chat_id_, msg.id_,"⌔︙ تم الغاء الاذاعة .") 
 database:del(bot_id.."Alex:Alex:Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
@@ -1182,7 +1182,7 @@ end
 end 
 
 if database:get(bot_id.."Alex:Alex:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == "الغاء" or text == "الغاء ✖" then   
+if text == "الغاء" or text == "⌔︙ الغاء ." then   
 send(msg.chat_id_, msg.id_,"⌔︙ تم الغاء الاذاعة .") 
 database:del(bot_id.."Alex:Alex:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
@@ -1216,7 +1216,7 @@ return false
 end
 
 if database:get(bot_id.."Alex:Alex:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == "الغاء" or text == "الغاء ✖" then   
+if text == "الغاء" or text == "⌔︙ الغاء ." then   
 send(msg.chat_id_, msg.id_,"⌔︙ تم الغاء الاذاعة .") 
 database:del(bot_id.."Alex:Alex:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
@@ -1250,7 +1250,7 @@ return false
 end
 
 if database:get(bot_id.."Alex:Alex:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == "الغاء" or text == "الغاء ✖" then   
+if text == "الغاء" or text == "⌔︙ الغاء ." then   
 send(msg.chat_id_, msg.id_,"⌔︙ تم الغاء الاذاعة .") 
 database:del(bot_id.."Alex:Alex:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false  
@@ -1271,7 +1271,7 @@ end
 return false
 end
 if database:get(bot_id.."Alex:Alex:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == "الغاء" or text == "الغاء ✖" then   
+if text == "الغاء" or text == "⌔︙ الغاء ." then   
 send(msg.chat_id_, msg.id_,"⌔︙ تم الغاء الاذاعة .") 
 database:del(bot_id.."Alex:Alex:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false  
@@ -1302,7 +1302,7 @@ return false
 end
 end
 if database:get(bot_id.."Alex:Set:Name:Bot"..msg.sender_user_id_) then 
-if text == "الغاء" or text == "الغاء ✖" then   
+if text == "الغاء" or text == "⌔︙ الغاء ." then   
 send(msg.chat_id_, msg.id_,"⌔︙ تم الغاء حفظ اسم البوت .") 
 database:del(bot_id.."Alex:Set:Name:Bot"..msg.sender_user_id_) 
 return false  
@@ -7113,7 +7113,7 @@ local Text = '⌔︙ اهلا بك عزيزي المطور في الاوامر �
 local keyboard = {
 {'⌔︙ الاحصائيات .'},
 {'⌔︙ تعطيل التواصل .','⌔︙ تفعيل التواصل .'},
-{'⌔︙ تنظيف المشتركين .','تنظيف الكروبات .'},
+{'⌔︙ تنظيف المشتركين .','⌔︙ تنظيف الكروبات .'},
 {'⌔︙ تفعيل البوت الخدمي .','⌔︙ تعطيل البوت الخدمي .'},
 {'⌔︙ اذاعة .','⌔︙ المطورين .','⌔︙ اذاعة خاص .'},
 {'⌔︙ اذاعة بالتوجيه .','⌔︙ اذاعة بالتوجيه خاص .'},
@@ -8801,6 +8801,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Texti).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..msg.sender_user_id_)
 return false
+end
 end
 if msg.sender_user_id_ and Muted_Groups(msg.chat_id_,msg.sender_user_id_) then 
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})  
