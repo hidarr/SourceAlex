@@ -8747,7 +8747,7 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Texti)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 end
-end
+
 
 if Text and Text:match('(%d+)/UnKed@(%d+):(%d+)') then
 local ramsesadd = {string.match(Text,"^(%d+)/UnKed@(%d+):(%d+)$")}
@@ -8758,7 +8758,7 @@ https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?ch
 end
 end
 end
-
+end
 if data.ID == "UpdateChannel" then 
 if data.channel_.status_.ID == "ChatMemberStatusKicked" then 
 database:srem(bot_id..'Alex:Chek:Groups','-100'..data.channel_.id_)  
@@ -8804,7 +8804,7 @@ https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. 
 https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..msg.sender_user_id_)
 return false
 end
-end
+
 if msg.sender_user_id_ and Muted_Groups(msg.chat_id_,msg.sender_user_id_) then 
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})  
 return false  
