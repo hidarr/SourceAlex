@@ -28,7 +28,7 @@ io.write('\n\27[1;31m»» The Token Is Saved\n\27[0;39;49m')
 database:set(Server_Alex.."Token_Alex",token)
 end 
 else
-io.write('\n\27[1;31mThe Tokem was not Saved\n\27[0;39;49m')
+io.write('\n\27[1;31mThe Token was not Saved\n\27[0;39;49m')
 end 
 os.execute('lua start.lua')
 end
