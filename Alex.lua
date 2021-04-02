@@ -8747,8 +8747,6 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Texti)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 end
-end
-
 if Text and Text:match('(%d+)/UnKed@(%d+):(%d+)') then
 local ramsesadd = {string.match(Text,"^(%d+)/UnKed@(%d+):(%d+)$")}
 if tonumber(ramsesadd[2]) == tonumber(ramsesadd[3]) then
@@ -8758,8 +8756,6 @@ https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?ch
 end
 end
 end
-
-
 if data.ID == "UpdateChannel" then 
 if data.channel_.status_.ID == "ChatMemberStatusKicked" then 
 database:srem(bot_id..'Alex:Chek:Groups','-100'..data.channel_.id_)  
@@ -8772,7 +8768,6 @@ if msg.date_ and msg.date_ < tonumber(os.time() - 30) then
 print("OLD MESSAGE")
 return false
 end
-
 if text == 'تعطيل التحقق' and Addictive(msg) then   
 database:del(bot_id..'Alex:nwe:mem:group'..msg.chat_id_) 
 send(msg.chat_id_, msg.id_,'\n⌔︙ تم تعطيل التحقق .' ) 
@@ -9102,5 +9097,4 @@ if data and data.type_ and data.type_.channel_ and data.type_.channel_.status_ a
 database:sadd(bot_id..'Alex:Chek:Groups',v)  
 end end,nil)
 end;end;end
-end
 end
