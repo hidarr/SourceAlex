@@ -67,7 +67,7 @@ Create_Info(database:get(Server_Alex.."Token_Alex"),database:get(Server_Alex.."I
 local RunAlex = io.open("Alex", 'w')
 RunAlex:write([[
 #!/usr/bin/env bash
-cd $HOME/Alexx
+cd $HOME/SourceAlex
 token="]]..database:get(Server_Alex.."Token_Alex")..[["
       
 while(true) do
