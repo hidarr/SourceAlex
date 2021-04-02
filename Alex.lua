@@ -6271,11 +6271,11 @@ else
 BROK = '\n⌔︙ تم حذف : '..q..' كروب .'
 end
 if w == 0 then
-storm = ''
+GGGCG = ''
 else
-storm = '\n⌔︙ تم حذف : '..w..' كروب لان البوت عضو .'
+GGGCG = '\n⌔︙ تم حذف : '..w..' كروب لان البوت عضو .'
 end
-send(msg.chat_id_, msg.id_,'⌔︙ عدد الكروبات : '..#group..' .'..storm..''..BROK..'\n⌔︙ عدد الكروبات الان : '..sendok..' .\n')   
+send(msg.chat_id_, msg.id_,'⌔︙ عدد الكروبات : '..#group..' .'..GGGCG..''..BROK..'\n⌔︙ عدد الكروبات الان : '..sendok..' .\n')   
 end
 end
 end,nil)
@@ -6286,8 +6286,8 @@ if text == ("تحديث السورس") and DevAlex(msg) then
 send(msg.chat_id_,msg.id_,'⌔︙ تم تحديث السورس .')
 os.execute('rm -rf Alex.lua')
 os.execute('rm -rf start.lua')
-download_to_file('https://raw.githubusercontent.com/TEAMAlexX/Alexx/master/Alex.lua', 'Alex.lua') 
-download_to_file('https://raw.githubusercontent.com/TEAMAlexX/Alexx/master/start.lua', 'start.lua') 
+download_to_file('https://raw.githubusercontent.com/SourceAlex/SourceAlex/master/Alex.lua', 'Alex.lua') 
+download_to_file('https://raw.githubusercontent.com/SourceAlex/SourceAlex/master/start.lua', 'start.lua') 
 dofile('Alex.lua')  
 return false
 end
@@ -6402,7 +6402,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if DevAlex(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/TEAMAlexX/files_Alex/master/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/SourceAlex/SourceAlex/master/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -6440,7 +6440,7 @@ t = "⌔︙ الملف : {"..file.."} .\n⌔︙ تم تعطيله وحذفه ."
 else
 t = "تم تعطيل وحذف الملف : {"..file.."} من قبل ."
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/TEAMAlexX/files_Alex/master/files_Alex/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/SourceAlex/SourceAlex/master/"..file)
 if res == 200 then
 os.execute("rm -fr Alex_Files/"..file)
 send(msg.chat_id_, msg.id_,t) 
@@ -6460,7 +6460,7 @@ t = "⌔︙ تم تفعيل : {"..file.."} من قبل ."
 else
 t = "⌔︙ تم تفعيل الملف : {"..file.."} بنجاح ."
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/TEAMAlexX/files_Alex/master/files_Alex/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/SourceAlex/SourceAlex/master/"..file)
 if res == 200 then
 local chek = io.open("Alex_Files/"..file,'w+')
 chek:write(json_file)
@@ -7269,11 +7269,11 @@ else
 BROK = '\n⌔︙ تم حذف : '..q..' كروب .'
 end
 if w == 0 then
-storm = ''
+GGGCG = ''
 else
-storm = '\n⌔︙ تم حذف : '..w..' كروب لان البوت عضو .'
+GGGCG = '\n⌔︙ تم حذف : '..w..' كروب لان البوت عضو .'
 end
-send(msg.chat_id_, msg.id_,'⌔︙ عدد الكروبات : '..#group..' .'..storm..''..BROK..'\n⌔︙ عدد الكروبات الان : '..sendok..' .\n')   
+send(msg.chat_id_, msg.id_,'⌔︙ عدد الكروبات : '..#group..' .'..GGGCG..''..BROK..'\n⌔︙ عدد الكروبات الان : '..sendok..' .\n')   
 end
 end
 end,nil)
@@ -7484,8 +7484,8 @@ if text == "⌔︙ تحديث السورس ." then
 send(msg.chat_id_,msg.id_,'⌔︙ تم تحديث السورس .')
 os.execute('rm -rf Alex.lua')
 os.execute('rm -rf start.lua')
-download_to_file('https://raw.githubusercontent.com/TEAMAlexX/Alexx/master/Alex.lua', 'Alex.lua') 
-download_to_file('https://raw.githubusercontent.com/TEAMAlexX/Alexx/master/start.lua', 'start.lua') 
+download_to_file('https://raw.githubusercontent.com/SourceAlex/SourceAlex/master/Alex.lua', 'Alex.lua') 
+download_to_file('https://raw.githubusercontent.com/SourceAlex/SourceAlex/master/start.lua', 'start.lua') 
 dofile('Alex.lua')  
 return false
 end
