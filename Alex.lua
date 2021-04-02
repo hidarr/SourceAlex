@@ -7507,52 +7507,52 @@ local Text = data.payload_.data_
 if Text and Text:match('(.*)/help1') and Addictive(BROKj) then
 if tonumber(Text:match('(.*)/help1')) == tonumber(data.sender_user_id_) then
 local Teext =[[
-📮┇ اوامر حمايه المجموعه
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-⏺┇قفل/فتح + الاوامر الادناه 
-⏺┇قفل/فتح + الامر بالتقيد • بالطرد • بالكتم
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🔐┇الروابط
-🔐┇المعرف
-🔐┇التاك
-🔐┇الشارحه
-🔐┇التعديل
-🔐┇التثبيت
-🔐┇المتحركه
-🔐┇الملفات
-🔐┇الصور
-
-🔐┇الملصقات
-🔐┇الفيديو
-🔐┇الانلاين
-🔐┇الدردشه
-🔐┇التوجيه
-🔐┇الاغاني
-🔐┇الصوت
-🔐┇الجهات
-🔐┇الاشعارات
-
-🔐┇الماركداون
-🔐┇البوتات
-🔐┇التكرار
-🔐┇الكلايش
-🔐┇السيلفي
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇Ch ~⪼ [@AlexX]
+    ⌔︙ قائمة اوامر الحماية .
+    - - - - -
+    قفل او فتح + الامر
+    قفل او فتح الامر بالتقييد
+    قفل او فتح الامر بالطرد
+    قفل او فتح الامر بالكتم
+    - - - - -
+    - الروابط .
+    - المعرف .
+    - التاك .
+    - الشارحة .
+    - التعديل .
+    - التثبيت .
+    - المتحركة .
+    - الملفات .
+    - الصور .
+    - - - - -
+    - الملصقات .
+    - الفيديو .
+    - الانلاين .
+    - الدردشة .
+    - التوجيه .
+    - الاغاني .
+    - الصوت .
+    - الجهات .
+    - الاشعارات .
+    - - - - -
+    - الماركداون .
+    - البوتات .
+    - التكرار .
+    - الكلايش .
+    - السيلفي .
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'م1', callback_data=data.sender_user_id_.."/help1"},{text = 'م2', callback_data=data.sender_user_id_.."/help2"},{text = 'م3', callback_data=data.sender_user_id_.."/help3"},
+{text = '- اوامر الحماية .', callback_data=msg.sender_user_id_.."/help1"},{text = '- اوامر الادمنية .', callback_data=msg.sender_user_id_.."/help2"},
 },
 {
-{text = 'م4', callback_data=data.sender_user_id_.."/help4"},
+{text = '- اوامر المدراء .', callback_data=msg.sender_user_id_.."/help3"},
 },
 {
-{text = 'م5', callback_data=data.sender_user_id_.."/help5"},
+{text = '- اوامر المنشئين .', callback_data=msg.sender_user_id_.."/help4"},{text = '- اوامر المطورين .', callback_data=msg.sender_user_id_.."/help5"},
 },
 {
-{text = 'الاوامر الرئيسيه', callback_data=data.sender_user_id_.."/help"},
+{text = '- الاوامر الرئيسية .', callback_data=data.sender_user_id_.."/help"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -7561,80 +7561,75 @@ end
 if Text and Text:match('(.*)/help2') and Addictive(BROKj) then
 if tonumber(Text:match('(.*)/help2')) == tonumber(data.sender_user_id_) then
 local Teext =[[
-🥈┇اوامر الادمنيه
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-▶️┇رفع/تنزيل مميز
-📮┇تاك للكل
-📮┇عدد الكروب
-🚫┇كتم
-🚷┇حظر
-🚷┇طرد
-🚫┇منع
-🚫┇تقيد
-⏺┇الغاء حظر
-⏺┇الغاء كتم
-⏺┇الغاء تقيد
-⏺┇الغاء منع
-📋┇المحظورين
-📋┇المكتومين
-📋┇المميزين
-📋┇الصلاحيات
-📋┇قائمه المنع
-
-〽┇تثبيت
-⏺┇الغاء تثبيت
-📄┇الاعدادات
-
-🗳┇الرابط
-📃┇القوانين
-
-👋🏻┇الترحيب
-👋🏻┇تفعيل/تعطيل الترحيب
-⚠️┇اضف /مسح صلاحيه 
-⚠️┇وضع تكرار + العدد
-💭┇ايدي
-💭┇جهاتي
-💭┇سحكاتي
-💭┇رسائلي
-💭┇كشف البوتات
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🔘┇وضع + الاوامر الادناه
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📝┇اسم
-📝┇رابط
-📝┇صوره
-📝┇وصف
-📝┇قوانين
-??┇ترحيب
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🗑┇مسح + الاوامر الادناه
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📮┇قائمه المنع
-📮┇المحظورين
-📮┇المميزين
-📮┇المكتومين
-📮┇المطرودين
-📮┇القوانين
-📮┇البوتات
-📮┇الصوره
-📮┇الصلاحيات
-📮┇الرابط
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇CH [@AlexX]
+    ⌔︙ قائمة اوامر الادمنية .
+    - - - - -
+    - رفع او تنزيل مميز .
+    - تاك للكل .
+    - عدد الكروب .
+    - كتم .
+    - حظر .
+    - طرد .
+    - منع .
+    - تقييد .
+    - الغاء حظر .
+    - الغاء كتم .
+    - الغاء تقييد .
+    - الغاء منع .
+    - المحظورين .
+    - المكتومين .
+    - المميزين .
+    - الصلاحيات .
+    - قائمة المنع .
+    - - - - -
+    - تثبيت .
+    - الفاء تثبيت .
+    - الاعدادات .
+    - الرابط .
+    - القوانين .
+    - - - - -
+    - الترحيب .
+    - تفعيل او تعطيل الترحيب .
+    - اضف او مسح صلاحية . 
+    - وضع التكرار + العدد .
+    - ايدي .
+    - جهاتي .
+    - سحكاتي .
+    - رسائلي .
+    - كشف البوتات .
+    - - - - -
+    - وضع + الامر .
+    - اسم .
+    - رابط .
+    - صورة .
+    - وصف .
+    - قوانين .
+    - ترحيب .
+    - - - - -
+    - مسح + الامر
+    - قائمة المنع .
+    - المحظورين .
+    - المميزين .
+    - المكتومين .
+    - المطرودين .
+    - القوانين .
+    - البوتات .
+    - الصورة .
+    - الصلاحيات .
+    - الرابط .
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'م1', callback_data=data.sender_user_id_.."/help1"},{text = 'م2', callback_data=data.sender_user_id_.."/help2"},{text = 'م3', callback_data=data.sender_user_id_.."/help3"},
+{text = '- اوامر الحماية .', callback_data=msg.sender_user_id_.."/help1"},{text = '- اوامر الادمنية .', callback_data=msg.sender_user_id_.."/help2"},
 },
 {
-{text = 'م4', callback_data=data.sender_user_id_.."/help4"},
+{text = '- اوامر المدراء .', callback_data=msg.sender_user_id_.."/help3"},
 },
 {
-{text = 'م5', callback_data=data.sender_user_id_.."/help5"},
+{text = '- اوامر المنشئين .', callback_data=msg.sender_user_id_.."/help4"},{text = '- اوامر المطورين .', callback_data=msg.sender_user_id_.."/help5"},
 },
 {
-{text = 'الاوامر الرئيسيه', callback_data=data.sender_user_id_.."/help"},
+{text = '- الاوامر الرئيسية .', callback_data=data.sender_user_id_.."/help"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -7643,58 +7638,48 @@ end
 if Text and Text:match('(.*)/help3') and Owner(BROKj) then
 if tonumber(Text:match('(.*)/help3')) == tonumber(data.sender_user_id_) then
 local Teext =[[
-🥇┇ اوامر المدراء
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-↕️┇رفع/تنزيل ادمن
-↕️┇رفع/كشف القيود
-↕️┇تنزيل الكل
-
-💬┇تفعيل/تعطيل الايدي بالصوره
-💬┇تفعيل/تعطيل الايدي
-💬┇تفعيل/تعطيل ردود المطور
-💬┇تفعيل/تعطيل اللعبه/الالعاب
-💬┇تفعيل/تعطيل ردود المدير
-💬┇تفعيل/تعطيل اطردني
-💬┇تفعيل/تعطيل الرفع
-💬┇تفعيل/تعطيل الحظر/الطرد
-💬┇تفعيل/تعطيل الرابط/جلب الرابط
-💬┇تفعيل/تعطيل اوامر التحشيش
-
-♨️┇تعين/مسح الايدي
-
-🖇┇رفع الادمنيه
-🖇┇اضف/حذف رد
-📋┇الادمنيه
-📋┇ردود المدير
-
-🗑┇تنظيف + عدد
-🗑┇مسح الادمنيه
-🗑┇مسح ردود المدير
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🔘┇لتغير ردود الايدي :- 
-تغير رد المطور + النص
-تغير رد المنشئ الاساسي + النص
-تغير رد المنشئ + النص
-تغير رد المدير + النص
-تغير رد الادمن + النص
-تغير رد المميز + النص
-تغير رد العضو + النص
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇CH [@AlexX]
+    ⌔︙ قائمة اوامر المدراء .
+    - - - - -
+    - رفع او تنزيل ادمن .
+    - رفع او كشف القيود .
+    - تنزيل الكل .
+    - - - - -
+    - تفعيل او تعطيل الايدي بالصورة .
+    - تفعيل او تعطيل الايدي .
+    - تفعيل او تعطيل ردود المدير .
+    - تفعيل او تعطيل الالعاب .
+    - تفعيل او تعطيل اطردني .
+    - تفعيل او تعطيل الرفع .
+    - تفعيل او تعطيل الحظر .
+    - تفعيل او تعطيل الطرد .
+    - تفعيل او تعطيل جلب الرابط .
+    - تفعيل او تعطيل اوامر التحشيش .
+    - تفعيل او تعطيل التنزيل .
+    - تعيين او مسح الايدي .
+    - اضف او حذف رد .
+    - اضف او حذف رد متعدد .
+    - - - - -
+    - رفع الادمنية .
+    - الادمنية .
+    - ردود المدير .
+    - تنظيف + عدد .
+    - مسح الادمنية .
+    - مسح الميديا .
+    - مسح ردود المدير .
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'م1', callback_data=data.sender_user_id_.."/help1"},{text = 'م2', callback_data=data.sender_user_id_.."/help2"},{text = 'م3', callback_data=data.sender_user_id_.."/help3"},
+{text = '- اوامر الحماية .', callback_data=msg.sender_user_id_.."/help1"},{text = '- اوامر الادمنية .', callback_data=msg.sender_user_id_.."/help2"},
 },
 {
-{text = 'م4', callback_data=data.sender_user_id_.."/help4"},
+{text = '- اوامر المدراء .', callback_data=msg.sender_user_id_.."/help3"},
 },
 {
-{text = 'م5', callback_data=data.sender_user_id_.."/help5"},
+{text = '- اوامر المنشئين .', callback_data=msg.sender_user_id_.."/help4"},{text = '- اوامر المطورين .', callback_data=msg.sender_user_id_.."/help5"},
 },
 {
-{text = 'الاوامر الرئيسيه', callback_data=data.sender_user_id_.."/help"},
+{text = '- الاوامر الرئيسية .', callback_data=data.sender_user_id_.."/help"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -7703,40 +7688,38 @@ end
 if Text and Text:match('(.*)/help4') and Constructor(BROKj) then
 if tonumber(Text:match('(.*)/help4')) == tonumber(data.sender_user_id_) then
 local Teext =[[
-🏅┇اوامر المنشئين الاساسين 
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-↕️┇رفع/تنزيل منشئ
-↕️┇المنشئين
-🗑┇مسح المنشئين
-
-🏅┇اوامر المنشئين
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-↕️┇رفع/تنزيل مدير
-↕️┇المدراء
-🗑┇مسح المدراء
-🔘┇تعين/مسح الايدي
-➕┇اضف/حذف امر
-➕┇الاوامر المضافه
-➕┇حذف/مسح الاوامر المضافه
-➕┇اضف رسائل + العدد بالرد
-➕┇اضف مجوهرات + العدد بالرد
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇CH [@AlexX]
+    ⌔︙ قائمة اوامر المنشئين الاساسيين .
+    - - - - -
+    - رفع او تنزيل منشئ .
+    - المنشئين .
+    - مسح المنشئين .
+    - - - - -
+    ⌔︙ قائمة اوامر المنشئين .
+    - - - - -
+    - رفع او تنزيل مدير .
+    - المدراء .
+    - مسح المدراء .
+    - تعيين او مسح الايدي .
+    - اضف او حذف امر .
+    - الاوامر المضافة .
+    - مسح الاوامر المضافة .
+    - اضف رسائل + العدد بالرد .
+    - اضف مجوهرات + العدد بالرد .
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = 'م1', callback_data=data.sender_user_id_.."/help1"},{text = 'م2', callback_data=data.sender_user_id_.."/help2"},{text = 'م3', callback_data=data.sender_user_id_.."/help3"},
-},
-{
-{text = 'م4', callback_data=data.sender_user_id_.."/help4"},
-},
-{
-{text = 'م5', callback_data=data.sender_user_id_.."/help5"},
-},
-{
-{text = 'الاوامر الرئيسيه', callback_data=data.sender_user_id_.."/help"},
-},
+    {
+        {text = '- اوامر الحماية .', callback_data=msg.sender_user_id_.."/help1"},{text = '- اوامر الادمنية .', callback_data=msg.sender_user_id_.."/help2"},
+        },
+        {
+        {text = '- اوامر المدراء .', callback_data=msg.sender_user_id_.."/help3"},
+        },
+        {
+        {text = '- اوامر المنشئين .', callback_data=msg.sender_user_id_.."/help4"},{text = '- اوامر المطورين .', callback_data=msg.sender_user_id_.."/help5"},
+        },
+        {
+        {text = '- الاوامر الرئيسية .', callback_data=data.sender_user_id_.."/help"},
+        },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -7744,58 +7727,52 @@ end
 if Text and Text:match('(.*)/help5') and DevBot(BROKj) then
 if tonumber(Text:match('(.*)/help5')) == tonumber(data.sender_user_id_) then
 local Teext =[[
-👁‍🗨┇اوامر المطور الاساسي  
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-↕️┇حظر عام
-↕️┇الغاء العام
-🗑┇مسح قائمه العام
-🚧┇تغير اسم البوت
-📥┇اضف /حذف مطور 
-👁‍🗨┇المطورين
-🗑┇مسح المطورين
-📋┇اضف/حذف رد للكل 
-📋┇مسح ردود المطور
-📋┇ردود المطور 
-📋┇وضع /حذف كليشه المطور 
-
-☑️┇تحديث  + تحديث السورس 
-
-📥┇تفعيل/تعطيل البوت الخدمي 
-📥┇ تعين عدد الاعضاء + العدد
-📥┇تفعيل/تعطيل المغادرة
-📥┇تفعيل/تعطيل الاذاعه 
-📥┇تفعيل/تعطيل ملف + اسم الملف
-📈┇الملفات 
-🗑┇مسح جميع الملفات 
-📄┇المتجر 
-🏅┇اوامر المطور 
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-👁‍🗨┇تفعيل /تعطيل
-
-↕️┇رفع/تنزيل منشئ اساسي
-↕️┇رفع منشئ 
-🗑┇مسح المنشئين الاساسين
-🔘┇المنشئين الاساسين 
-➕┇غادر 
-➕┇غادر + الايدي
-➕┇اذاعه 
-➕┇اذاعه بالتوجيه
-➕┇اذاعه خاص 
-➕┇اذاعه بالتثبيت 
-➕┇الاحصائيات 
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇CH [@AlexX]
+    ⌔︙ قائمة اوامر المطور الاساسي .
+    - - - - -
+    - حظر عام .
+    - الغاء العام .
+    - مسح قائمة العام .
+    - تغيير اسم البوت .
+    - رفع او تنزيل مطور . 
+    - المطورين .
+    - مسح المطورين .
+    - اضف او حذف رد للكل .
+    - مسح ردود المطور .
+    - ردود المطور .
+    - وضع او حذف كليشة المطور .
+    - تحديث السورس . 
+    - تفعيل او تعطيل البوت الخدمي .
+    - تعيين عدد الاعضاء + العدد .
+    - تفعيل او تعطيل المغادرة .
+    - تفعيل او تعطيل الاذاعة .
+    ⌔︙ قائمة اوامر المطورين . 
+    - - - - -
+    - تفعيل او تعطيل .
+    - رفع او تنزيل مالك .
+    - رفع او تنزيل منشئ اساسي .
+    - رفع منشئ .
+    - مسح المنشئين الاساسيين .
+    - المنشئين الاساسيين .
+    - غادر .
+    - اذاعة .
+    - اذاعة بالتجويه .
+    - اذاعة خاص .
+    - اذاعة بالتثبيت .
+    - الاحصائيات .
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'م1', callback_data=data.sender_user_id_.."/help1"},{text = 'م2', callback_data=data.sender_user_id_.."/help2"},{text = 'م3', callback_data=data.sender_user_id_.."/help3"},
+{text = '- اوامر الحماية .', callback_data=msg.sender_user_id_.."/help1"},{text = '- اوامر الادمنية .', callback_data=msg.sender_user_id_.."/help2"},
 },
 {
-{text = 'م4', callback_data=data.sender_user_id_.."/help4"},
+{text = '- اوامر المدراء .', callback_data=msg.sender_user_id_.."/help3"},
 },
 {
-{text = 'م5', callback_data=data.sender_user_id_.."/help5"},
+{text = '- اوامر المنشئين .', callback_data=msg.sender_user_id_.."/help4"},{text = '- اوامر المطورين .', callback_data=msg.sender_user_id_.."/help5"},
+},
+{
+{text = '- الاوامر الرئيسية .', callback_data=data.sender_user_id_.."/help"},
 },
 {
 {text = 'الاوامر الرئيسيه', callback_data=data.sender_user_id_.."/help"},
@@ -7807,29 +7784,22 @@ end
 if Text and Text:match('(.*)/help') and Addictive(BROKj) then
 if tonumber(Text:match('(.*)/help')) == tonumber(data.sender_user_id_) then
 local Teext =[[
-📮┇هناك {5} اوامر لعرضها
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🗑┇م1 ~⪼ لعرض اوامر الحمايه
-📚┇م2 ~⪼ لعرض اوامر الادمنيه
-🗓┇م3 ~⪼ لعرض اوامر المدراء
-🎖┇م4 ~⪼ لعرض اوامر المنشئين
-👤┇م5 ~⪼ لعرض اوامر المطورين
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇CH [@AlexX]
+    ⌔︙ اهلا بك في قسم الاوامر .
+    ⌔︙ اختر الامر الذي تريده من الازرار بلاسفل .
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'م1', callback_data=data.sender_user_id_.."/help1"},{text = 'م2', callback_data=data.sender_user_id_.."/help2"},{text = 'م3', callback_data=data.sender_user_id_.."/help3"},
+{text = '- اوامر الحماية .', callback_data=msg.sender_user_id_.."/help1"},{text = '- اوامر الادمنية .', callback_data=msg.sender_user_id_.."/help2"},
 },
 {
-{text = 'م4', callback_data=data.sender_user_id_.."/help4"},
+{text = '- اوامر المدراء .', callback_data=msg.sender_user_id_.."/help3"},
 },
 {
-{text = 'م5', callback_data=data.sender_user_id_.."/help5"},
+{text = '- اوامر المنشئين .', callback_data=msg.sender_user_id_.."/help4"},{text = '- اوامر المطورين .', callback_data=msg.sender_user_id_.."/help5"},
 },
 {
-{text = 'اوامر التعطيل', callback_data=data.sender_user_id_.."/homeaddrem"},{text = 'اوامر القفل', callback_data=data.sender_user_id_.."/homelocks"},
+{text = '- اوامر التعطيل .', callback_data=msg.sender_user_id_.."/homeaddrem"},{text = '- اوامر القفل .', callback_data=msg.sender_user_id_.."/homelocks"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -7838,7 +7808,7 @@ end
 
 if Text and Text:match('(.*)/lockdul') and Owner(data) then
 if tonumber(Text:match('(.*)/lockdul')) == tonumber(data.sender_user_id_) then
-local Textedit = '• تم تعطيل التنزيل '
+local Textedit = '⌔︙ تم تعطيل التنزيل .'
 database:set(bot_id..'dw:bot:api'..Chat_id,true) 
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -8103,44 +8073,44 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 elseif Text and Text:match('(.*)/homeaddrem') and Owner(data) then
 if tonumber(Text:match('(.*)/homeaddrem')) == tonumber(data.sender_user_id_) then
-local Texti = 'تستطيع تعطيل وتفعيل عبر الازرار'
+local Texti = '⌔︙ اختر الامر الذي تريده من الازرار بلاسفل .'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'تعطيل التنزيل', callback_data=data.sender_user_id_.."/lockdul"},{text = 'تفعيل التنزيل', callback_data=data.sender_user_id_.."/unlockdul"},
+{text = '- تعطيل التنزيل .', callback_data=msg.sender_user_id_.."/lockdul"},{text = '- تفعيل التنزيل .', callback_data=msg.sender_user_id_.."/unlockdul"},
 },
 {
-{text = 'تعطيل الرابط', callback_data=data.sender_user_id_.."/lock_links"},{text = 'تفعيل الرابط', callback_data=data.sender_user_id_.."/unlock_links"},
+{text = '- تعطيل الرابط .', callback_data=msg.sender_user_id_.."/lock_links"},{text = '- تفعيل الرابط .', callback_data=msg.sender_user_id_.."/unlock_links"},
 },
 {
-{text = 'تعطيل الترحيب', callback_data=data.sender_user_id_.."/lockwelcome"},{text = 'تفعيل الترحيب', callback_data=data.sender_user_id_.."/unlockwelcome"},
+{text = '- تعطيل الترحيب .', callback_data=msg.sender_user_id_.."/lockwelcome"},{text = '- تفعيل الترحيب .', callback_data=msg.sender_user_id_.."/unlockwelcome"},
 },
 {
-{text = 'تعطيل الردود العامه', callback_data=data.sender_user_id_.."/lockrepall"},{text = 'تفعيل الردود العامه', callback_data=data.sender_user_id_.."/unlockrepall"},
+{text = '- تعطيل الردود العامة .', callback_data=msg.sender_user_id_.."/lockrepall"},{text = '- تفعيل الردود العامة .', callback_data=msg.sender_user_id_.."/unlockrepall"},
 },
 {
-{text = 'تعطيل الايدي', callback_data=data.sender_user_id_.."/lockide"},{text = 'تفعيل الايدي', callback_data=data.sender_user_id_.."/unlockide"},
+{text = '- تعطيل الايدي .', callback_data=msg.sender_user_id_.."/lockide"},{text = '- تفعيل الايدي .', callback_data=msg.sender_user_id_.."/unlockide"},
 },
 {
-{text = 'تعطيل الايدي بالصوره', callback_data=data.sender_user_id_.."/lockidephoto"},{text = 'تفعيل الايدي بالصوره', callback_data=data.sender_user_id_.."/unlockidephoto"},
+{text = '- تعطيل الايدي بالصورة .', callback_data=msg.sender_user_id_.."/lockidephoto"},{text = '- تفعيل الايدي بالصورة .', callback_data=msg.sender_user_id_.."/unlockidephoto"},
 },
 {
-{text = 'تعطيل الحظر', callback_data=data.sender_user_id_.."/lockkiked"},{text = 'تفعيل الحظر', callback_data=data.sender_user_id_.."/unlockkiked"},
+{text = '- تعطيل الحظر .', callback_data=msg.sender_user_id_.."/lockkiked"},{text = '- تفعيل الحظر .', callback_data=msg.sender_user_id_.."/unlockkiked"},
 },
 {
-{text = 'تعطيل الرفع', callback_data=data.sender_user_id_.."/locksetm"},{text = 'تفعيل الرفع', callback_data=data.sender_user_id_.."/unlocksetm"},
+{text = '- تعطيل الرفع .', callback_data=msg.sender_user_id_.."/locksetm"},{text = '- تفعيل الرفع .', callback_data=msg.sender_user_id_.."/unlocksetm"},
 },
 {
-{text = 'تعطيل اطردني', callback_data=data.sender_user_id_.."/lockkikedme"},{text = 'تفعيل اطردني', callback_data=data.sender_user_id_.."/unlockkikedme"},
+{text = '- تعطيل اطردني .', callback_data=msg.sender_user_id_.."/lockkikedme"},{text = '- تفعيل اطردني .', callback_data=msg.sender_user_id_.."/unlockkikedme"},
 },
 {
-{text = 'تعطيل الالعاب', callback_data=data.sender_user_id_.."/lockgames"},{text = 'تفعيل الالعاب', callback_data=data.sender_user_id_.."/unlockgames"},
+{text = '- تعطيل الالعاب .', callback_data=msg.sender_user_id_.."/lockgames"},{text = '- تفعيل الالعاب .', callback_data=msg.sender_user_id_.."/unlockgames"},
 },
 {
-{text = 'تعطيل الردود', callback_data=data.sender_user_id_.."/lockrepgr"},{text = 'تفعيل الردود', callback_data=data.sender_user_id_.."/unlockrepgr"},
+{text = '- تعطيل الردود .', callback_data=msg.sender_user_id_..msg.sender_user_id_.."/lockrepgr"},{text = '- تفعيل الردود .', callback_data=msg.sender_user_id_.."/unlockrepgr"},
 },
 {
-{text = 'العوده', callback_data=data.sender_user_id_.."/help"},
+{text = '- رجوع .', callback_data=data.sender_user_id_.."/help"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Texti)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -8701,83 +8671,80 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 elseif Text and Text:match('(.*)/homelocks') and Addictive(data) then
 if tonumber(Text:match('(.*)/homelocks')) == tonumber(data.sender_user_id_) then
-local Texti = 'تستطيع قفل وفتح عبر الازرار'
+local Texti = '⌔︙ اختر الامر الذي تريده من الازرار بلاسفل .'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'قفل الاضافه', callback_data=data.sender_user_id_.."/lockjoine"},{text = 'فتح الاضافه', callback_data=data.sender_user_id_.."/unlockjoine"},
+    {text = '- قفل الاضافة .', callback_data=msg.sender_user_id_.."/lockjoine"},{text = '- فتح الاضافة .', callback_data=msg.sender_user_id_.."/unlockjoine"},
 },
 {
-{text = 'قفل الدردشه', callback_data=data.sender_user_id_.."/lockchat"},{text = 'فتح الدردشه', callback_data=data.sender_user_id_.."/unlockchat"},
+{text = '- قفل الدردشة .', callback_data=msg.sender_user_id_.."/lockchat"},{text = '- فتح الدردشة .', callback_data=msg.sender_user_id_.."/unlockchat"},
 },
 {
-{text = 'قفل الدخول', callback_data=data.sender_user_id_.."/lock_joine"},{text = 'فتح الدخول', callback_data=data.sender_user_id_.."/unlock_joine"},
+{text = '- قفل الدخول .', callback_data=msg.sender_user_id_.."/lock_joine"},{text = '- فتح الدخول .', callback_data=msg.sender_user_id_.."/unlock_joine"},
 },
 {
-{text = 'قفل البوتات', callback_data=data.sender_user_id_.."/lockbots"},{text = 'فتح البوتات', callback_data=data.sender_user_id_.."/unlockbots"},
+{text = '- قفل البوتات .', callback_data=msg.sender_user_id_.."/lockbots"},{text = '- فتح البوتات .', callback_data=msg.sender_user_id_.."/unlockbots"},
 },
 {
-{text = 'قفل الاشعارات', callback_data=data.sender_user_id_.."/locktags"},{text = 'فتح الاشعارات', callback_data=data.sender_user_id_.."/unlocktags"},
+{text = '- قفل الاشعارات .', callback_data=msg.sender_user_id_.."/locktags"},{text = '- فتح الاشعارات .', callback_data=msg.sender_user_id_.."/unlocktags"},
 },
 {
-{text = 'قفل التعديل', callback_data=data.sender_user_id_.."/lockedit"},{text = 'فتح التعديل', callback_data=data.sender_user_id_.."/unlockedit"},
+{text = '- قفل التعديل .', callback_data=msg.sender_user_id_.."/lockedit"},{text = '- فتح التعديل .', callback_data=msg.sender_user_id_.."/unlockedit"},
 },
 {
-{text = 'قفل الروابط', callback_data=data.sender_user_id_.."/locklink"},{text = 'فتح الروابط', callback_data=data.sender_user_id_.."/unlocklink"},
+{text = '- قفل الروابط .', callback_data=msg.sender_user_id_.."/locklink"},{text = '- فتح الروابط .', callback_data=msg.sender_user_id_.."/unlocklink"},
 },
 {
-{text = 'قفل المعرفات', callback_data=data.sender_user_id_.."/lockusername"},{text = 'فتح المعرفات', callback_data=data.sender_user_id_.."/unlockusername"},
+{text = '- قفل المعرفات .', callback_data=msg.sender_user_id_.."/lockusername"},{text = '- فتح المعرفات .', callback_data=msg.sender_user_id_.."/unlockusername"},
 },
 {
-{text = 'قفل التاك', callback_data=data.sender_user_id_.."/locktag"},{text = 'فتح التاك', callback_data=data.sender_user_id_.."/unlocktag"},
+{text = '- قفل التاك .', callback_data=msg.sender_user_id_.."/locktag"},{text = '- فتح التاك .', callback_data=msg.sender_user_id_.."/unlocktag"},
 },
 {
-{text = 'قفل الملصقات', callback_data=data.sender_user_id_.."/locksticar"},{text = 'فتح الملصقات', callback_data=data.sender_user_id_.."/unlocksticar"},
+{text = '- قفل الستكرات .', callback_data=msg.sender_user_id_.."/locksticar"},{text = '- فتح الستكرات .', callback_data=msg.sender_user_id_.."/unlocksticar"},
 },
 {
-{text = 'قفل المتحركه', callback_data=data.sender_user_id_.."/lockgif"},{text = 'فتح المتحركه', callback_data=data.sender_user_id_.."/unlockgif"},
+{text = '- فتح المتحركة .', callback_data=msg.sender_user_id_.."/lockgif"},{text = '- فتح المتحركة .', callback_data=msg.sender_user_id_.."/unlockgif"},
 },
 {
-{text = 'قفل الفيديو', callback_data=data.sender_user_id_.."/lockvideo"},{text = 'فتح الفيديو', callback_data=data.sender_user_id_.."/unlockvideo"},
+{text = '- قفل الفيديو .', callback_data=msg.sender_user_id_.."/lockvideo"},{text = '- فتح الفيديو .', callback_data=msg.sender_user_id_.."/unlockvideo"},
 },
 {
-{text = 'قفل الصور', callback_data=data.sender_user_id_.."/lockphoto"},{text = 'فتح الصور', callback_data=data.sender_user_id_.."/unlockphoto"},
+{text = '- قفل الصور .', callback_data=msg.sender_user_id_.."/lockphoto"},{text = '- فتح الصور .', callback_data=msg.sender_user_id_.."/unlockphoto"},
 },
 {
-{text = 'قفل الاغاني', callback_data=data.sender_user_id_.."/lockvoise"},{text = 'فتح الاغاني', callback_data=data.sender_user_id_.."/unlockvoise"},
+{text = '- قفل الاغاني .', callback_data=msg.sender_user_id_.."/lockvoise"},{text = '- فتح الاغاني .', callback_data=msg.sender_user_id_.."/unlockvoise"},
 },
 {
-{text = 'قفل الصوت', callback_data=data.sender_user_id_.."/lockaudo"},{text = 'فتح الصوت', callback_data=data.sender_user_id_.."/unlockaudo"},
+{text = '- قفل الصوت .', callback_data=msg.sender_user_id_.."/lockaudo"},{text = '- فتح الصوت .', callback_data=msg.sender_user_id_.."/unlockaudo"},
 },
 {
-{text = 'قفل التوجيه', callback_data=data.sender_user_id_.."/lockfwd"},{text = 'فتح التوجيه', callback_data=data.sender_user_id_.."/unlockfwd"},
+{text = '- قفل التوجيه .', callback_data=msg.sender_user_id_.."/lockfwd"},{text = '- فتح التوجيه .', callback_data=msg.sender_user_id_.."/unlockfwd"},
 },
 {
-{text = 'قفل الملفات', callback_data=data.sender_user_id_.."/lockfile"},{text = 'فتح الملفات', callback_data=data.sender_user_id_.."/unlockfile"},
+{text = '- قفل الملفات .', callback_data=msg.sender_user_id_.."/lockfile"},{text = '- فتح الملفات .', callback_data=msg.sender_user_id_.."/unlockfile"},
 },
 {
-{text = 'قفل الجهات', callback_data=data.sender_user_id_.."/lockphone"},{text = 'فتح الجهات', callback_data=data.sender_user_id_.."/unlockphone"},
+{text = '- قفل الجهات .', callback_data=msg.sender_user_id_.."/lockphone"},{text = '- فتح الجهات .', callback_data=msg.sender_user_id_.."/unlockphone"},
 },
 {
-{text = 'قفل الكلايش', callback_data=data.sender_user_id_.."/lockposts"},{text = 'فتح الكلايش', callback_data=data.sender_user_id_.."/unlockposts"},
+{text = '- قفل الكلايش .', callback_data=msg.sender_user_id_.."/lockposts"},{text = '- فتح الكلايش .', callback_data=msg.sender_user_id_.."/unlockposts"},
 },
 {
-{text = 'قفل التكرار', callback_data=data.sender_user_id_.."/lockflood"},{text = 'فتح التكرار', callback_data=data.sender_user_id_.."/unlockflood"},
+{text = '- قفل التكرار .', callback_data=msg.sender_user_id_.."/lockflood"},{text = '- فتح التكرار .', callback_data=msg.sender_user_id_.."/unlockflood"},
 },
 {
-{text = 'قفل الفارسيه', callback_data=data.sender_user_id_.."/lockfarse"},{text = 'فتح الفارسيه', callback_data=data.sender_user_id_.."/unlockfarse"},
+{text = '- قفل الفارسية .', callback_data=msg.sender_user_id_.."/lockfarse"},{text = '- فتح الفارسية .', callback_data=msg.sender_user_id_.."/unlockfarse"},
 },
 {
-{text = 'قفل السب', callback_data=data.sender_user_id_.."/lockfshar"},{text = 'فتح السب', callback_data=data.sender_user_id_.."/unlockfshar"},
+{text = '- قفل الفشار .', callback_data=msg.sender_user_id_.."/lockfshar"},{text = '- فتح الفشار .', callback_data=msg.sender_user_id_.."/unlockfshar"},
 },
 {
-{text = 'قفل الانجليزيه', callback_data=data.sender_user_id_.."/lockenglish"},{text = 'فتح الانجليزيه', callback_data=data.sender_user_id_.."/unlockenglish"},
+{text = '- قفل الانلاين .', callback_data=msg.sender_user_id_.."/lockinlene"},{text = '- فتح الانلاين .', callback_data=msg.sender_user_id_.."/unlockinlene"},
 },
 {
-{text = 'قفل الانلاين', callback_data=data.sender_user_id_.."/lockinlene"},{text = 'فتح الانلاين', callback_data=data.sender_user_id_.."/unlockinlene"},
-},
-{
-{text = 'العوده', callback_data=data.sender_user_id_.."/help"},
+{text = '- رجوع .', callback_data=data.sender_user_id_.."/help"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Texti)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
