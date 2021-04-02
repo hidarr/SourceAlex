@@ -8759,7 +8759,7 @@ end
 end
 end
 end
-end
+
 if data.ID == "UpdateChannel" then 
 if data.channel_.status_.ID == "ChatMemberStatusKicked" then 
 database:srem(bot_id..'Alex:Chek:Groups','-100'..data.channel_.id_)  
@@ -8772,7 +8772,7 @@ if msg.date_ and msg.date_ < tonumber(os.time() - 30) then
 print("OLD MESSAGE")
 return false
 end
-end
+
 if text == 'تعطيل التحقق' and Addictive(msg) then   
 database:del(bot_id..'Alex:nwe:mem:group'..msg.chat_id_) 
 send(msg.chat_id_, msg.id_,'\n⌔︙ تم تعطيل التحقق .' ) 
