@@ -76,10 +76,10 @@ rm -fr ../.telegram-cli
 done
 ]])
 RunAlex:close()
-local RunTs = io.open("ts", 'w')
+local RunTs = io.open("brok", 'w')
 RunTs:write([[
 #!/usr/bin/env bash
-cd $HOME/Alexx
+cd $HOME/SourceAlex
 while(true) do
 rm -fr ../.telegram-cli
 screen -S Alex -X kill
