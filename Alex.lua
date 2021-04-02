@@ -8748,7 +8748,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 end
 end
-end
+
 if Text and Text:match('(%d+)/UnKed@(%d+):(%d+)') then
 local ramsesadd = {string.match(Text,"^(%d+)/UnKed@(%d+):(%d+)$")}
 if tonumber(ramsesadd[2]) == tonumber(ramsesadd[3]) then
@@ -8770,6 +8770,7 @@ local text = msg.content_.text_
 if msg.date_ and msg.date_ < tonumber(os.time() - 30) then
 print("OLD MESSAGE")
 return false
+end
 end
 if text == 'تعطيل التحقق' and Addictive(msg) then   
 database:del(bot_id..'Alex:nwe:mem:group'..msg.chat_id_) 
