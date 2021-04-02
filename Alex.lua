@@ -8748,6 +8748,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 end
 end
+end
 if Text and Text:match('(%d+)/UnKed@(%d+):(%d+)') then
 local ramsesadd = {string.match(Text,"^(%d+)/UnKed@(%d+):(%d+)$")}
 if tonumber(ramsesadd[2]) == tonumber(ramsesadd[3]) then
