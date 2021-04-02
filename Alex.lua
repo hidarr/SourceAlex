@@ -8934,7 +8934,7 @@ end
 if text and text:match('^'..Name_Bot..' ') then
 data.message_.content_.text_ = data.message_.content_.text_:gsub('^'..Name_Bot..' ','')
 end
-------------------------------------------------------------------------
+end
 Alex_Started_Bot(msg,data)
 Alex_Files(msg)
 elseif (data.ID == "UpdateMessageEdited") then
