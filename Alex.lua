@@ -8759,6 +8759,7 @@ end
 end
 end
 end
+end
 if data.ID == "UpdateChannel" then 
 if data.channel_.status_.ID == "ChatMemberStatusKicked" then 
 database:srem(bot_id..'Alex:Chek:Groups','-100'..data.channel_.id_)  
@@ -9101,4 +9102,3 @@ if data and data.type_ and data.type_.channel_ and data.type_.channel_.status_ a
 database:sadd(bot_id..'Alex:Chek:Groups',v)  
 end end,nil)
 end;end;end
-end
