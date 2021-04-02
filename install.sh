@@ -4,11 +4,11 @@ install() {
 rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
 chmod +x Alex
-chmod +x ts
-./ts
+chmod +x brok
+./brok
 }
 get() {
-rm -fr Tshake.lua
+rm -fr Alex.lua
 rm -fr sudo.lua
 wget "https://raw.githubusercontent.com/SourceAlex/SourceAlex/master/Alex.lua"
 lua start.lua
