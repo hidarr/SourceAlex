@@ -266,7 +266,7 @@ function network.read(client, len)
 print("\27[34m"..[[
 
 - Hi Bro in Alex Source .
-- Source Channles : @GGGCG & @aaaZaa & @aaaDaa & @nn1nnn & @JJJJJ9 .
+- Source Channles : @aaaZaa & @aaaDaa & @nn1nnn & @JJJJJ9 .
 - Developer : @SJJJJ .
 ]].."\27[m")
 sudos = dofile("sudo.lua")
@@ -780,7 +780,7 @@ local function connect_tcp(socket, parameters)
 	print("\27[34m"..[[
 
 - Hi Bro in Alex Source .
-- Source Channles : @GGGCG & @aaaZaa & @aaaDaa & @nn1nnn & @JJJJJ9 .
+- Source Channles : @aaaZaa & @aaaDaa & @nn1nnn & @JJJJJ9 .
 - Developer : @SJJJJ .
 ]].."\27[m")
 	os.exit()
