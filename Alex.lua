@@ -7499,12 +7499,12 @@ end
 end
 function tdcli_update_callback(data)
     if data.ID == "UpdateNewCallbackQuery" then
-    tahaj = data
+    BROKj = data
     local Chat_id = data.chat_id_
     local Msg_id = data.message_id_
     local msg_idd = Msg_id/2097152/0.5
     local Text = data.payload_.data_
-    if Text and Text:match('(.*)/help1') and Addictive(tahaj) then
+    if Text and Text:match('(.*)/help1') and Addictive(BROKj) then
     if tonumber(Text:match('(.*)/help1')) == tonumber(data.sender_user_id_) then
     local Teext =[[
     📮┇ اوامر حمايه المجموعه
@@ -7540,22 +7540,7 @@ function tdcli_update_callback(data)
     ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
     📡┇Ch ~⪼ [@nn1nnn]
     ]]
-    keyboard = {} 
-    keyboard.inline_keyboard = {
-    {
-    {text = 'م1', callback_data=data.sender_user_id_.."/help1"},{text = 'م2', callback_data=data.sender_user_id_.."/help2"},{text = 'م3', callback_data=data.sender_user_id_.."/help3"},
-    },
-    {
-    {text = 'م4', callback_data=data.sender_user_id_.."/help4"},
-    },
-    {
-    {text = 'م5', callback_data=data.sender_user_id_.."/help5"},
-    },
-    {
-    {text = 'الاوامر الرئيسيه', callback_data=data.sender_user_id_.."/help"},
-    },
-    }
-    return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+    return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..) 
     end
     end
 if Text and Text:match('(.*)/help2') and Addictive(BROKj) then
