@@ -7500,60 +7500,6 @@ local Chat_id = data.chat_id_
 local Msg_id = data.message_id_
 local msg_idd = Msg_id/2097152/0.5
 local Text = data.payload_.data_
-if Text and Text:match('(.*)/help1') and Addictive(BROKj) then
-if tonumber(Text:match('(.*)/help1')) == tonumber(data.sender_user_id_) then
-local Teext =[[
-    ⌔︙ قائمة اوامر الحماية .
-    - - - - -
-    قفل او فتح + الامر
-    قفل او فتح الامر بالتقييد
-    قفل او فتح الامر بالطرد
-    قفل او فتح الامر بالكتم
-    - - - - -
-    - الروابط .
-    - المعرف .
-    - التاك .
-    - الشارحة .
-    - التعديل .
-    - التثبيت .
-    - المتحركة .
-    - الملفات .
-    - الصور .
-    - - - - -
-    - الملصقات .
-    - الفيديو .
-    - الانلاين .
-    - الدردشة .
-    - التوجيه .
-    - الاغاني .
-    - الصوت .
-    - الجهات .
-    - الاشعارات .
-    - - - - -
-    - الماركداون .
-    - البوتات .
-    - التكرار .
-    - الكلايش .
-    - السيلفي .
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '- اوامر الحماية .', callback_data=msg.sender_user_id_.."/help1"},{text = '- اوامر الادمنية .', callback_data=msg.sender_user_id_.."/help2"},
-},
-{
-{text = '- اوامر المدراء .', callback_data=msg.sender_user_id_.."/help3"},
-},
-{
-{text = '- اوامر المنشئين .', callback_data=msg.sender_user_id_.."/help4"},{text = '- اوامر المطورين .', callback_data=msg.sender_user_id_.."/help5"},
-},
-{
-{text = '- الاوامر الرئيسية .', callback_data=data.sender_user_id_.."/help"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-end
 if Text and Text:match('(.*)/help2') and Addictive(BROKj) then
 if tonumber(Text:match('(.*)/help2')) == tonumber(data.sender_user_id_) then
 local Teext =[[
@@ -8075,7 +8021,6 @@ keyboard.inline_keyboard = {
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Texti)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
 end
 if Text and Text:match('(.*)/lockjoine') and Addictive(data) then
 if tonumber(Text:match('(.*)/lockjoine')) == tonumber(data.sender_user_id_) then
