@@ -6562,7 +6562,11 @@ Text = [[
 - - - - -
 [- SainT .](t.me/nn1nnn)
 [- MY Bots ,](t.me/JJJJJ9)
-[- Dev. Bot .](t.me/SJJBOT)
+[- BROK Channel .](t.me/aaaZaa)
+[- Old School Rap .](t.me/aaaDaa)
+[- Developrt .](t.me/SJJJJ)
+[- MY Bot .](t.me/SJJBOT)
+[- Free Bots Maker .](t.me/frrbrbot)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 end
@@ -7027,7 +7031,7 @@ if text == 'تفعيل' and not DevBot(msg) and not database:get(bot_id..'Alex:F
 local res = https.request('https://brok-aapi.ml/API/Sub.php?id='..msg.sender_user_id_)
 if res then
 if res == 'false' then
-send(msg.chat_id_,msg.id_,'⌔︙ اشترك بقناة السورس وارجع دز الامر عمري .\n⌔︙ قناة السورس : @nn1nn .')   
+send(msg.chat_id_,msg.id_,'⌔︙ اشترك بقناة السورس وارجع دز الامر عمري .\n⌔︙ قناة السورس : @nn1nnn .')   
 return false 
 end end
 if msg.can_be_deleted_ == false then 
@@ -7500,7 +7504,62 @@ local Chat_id = data.chat_id_
 local Msg_id = data.message_id_
 local msg_idd = Msg_id/2097152/0.5
 local Text = data.payload_.data_
+if Text and Text:match('(.*)/help1') and Addictive(BROKj) then
+if tonumber(Text:match('(.*)/help1')) == tonumber(data.sender_user_id_) then
+local Teext =[[
+ ⌔︙ قائمة اوامر الحماية .
+- - - - -
+قفل او فتح + الامر
+قفل او فتح الامر بالتقييد
+قفل او فتح الامر بالطرد
+قفل او فتح الامر بالكتم
+- - - - -
+- الروابط .
+- المعرف .
+- التاك .
+- الشارحة .
+- التعديل .
+- التثبيت .
+- المتحركة .
+- الملفات .
+- الصور .
+- - - - -
+- الملصقات .
+- الفيديو .
+- الانلاين .
+- الدردشة .
+- التوجيه .
+- الاغاني .
+- الصوت .
+- الجهات .
+- الاشعارات .
+- - - - -
+- الماركداون .
+- البوتات .
+- التكرار .
+- الكلايش .
+- السيلفي .
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '- اوامر الحماية .', callback_data=msg.sender_user_id_.."/help1"},{text = '- اوامر الادمنية .', callback_data=msg.sender_user_id_.."/help2"},
+},
+{
+{text = '- اوامر المدراء .', callback_data=msg.sender_user_id_.."/help3"},
+},
+{
+{text = '- اوامر المنشئين .', callback_data=msg.sender_user_id_.."/help4"},{text = '- اوامر المطورين .', callback_data=msg.sender_user_id_.."/help5"},
+},
+{
+{text = '- الاوامر الرئيسية .', callback_data=data.sender_user_id_.."/help"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+end
 if Text and Text:match('(.*)/help2') and Addictive(BROKj) then
+if tonumber(Text:match('(.*)/help2')) == tonumber(data.sender_user_id_) then
 local Teext =[[
     ⌔︙ قائمة اوامر الادمنية .
     - - - - -
@@ -7574,6 +7633,7 @@ keyboard.inline_keyboard = {
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
 end
 if Text and Text:match('(.*)/help3') and Owner(BROKj) then
 if tonumber(Text:match('(.*)/help3')) == tonumber(data.sender_user_id_) then
@@ -7683,34 +7743,38 @@ keyboard.inline_keyboard = {
 {
 {text = '- الاوامر الرئيسية .', callback_data=data.sender_user_id_.."/help"},
 },
+{
+{text = 'الاوامر الرئيسيه', callback_data=data.sender_user_id_.."/help"},
+},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 end
 if Text and Text:match('(.*)/help') and Addictive(BROKj) then
-    if tonumber(Text:match('(.*)/help')) == tonumber(data.sender_user_id_) then
-    local Teext =[[
-        ⌔︙ اهلا بك في قسم الاوامر .
-        ⌔︙ اختر الامر الذي تريده من الازرار بلاسفل .
-    ]]
+if tonumber(Text:match('(.*)/help')) == tonumber(data.sender_user_id_) then
+local Teext =[[
+    ⌔︙ اهلا بك في قسم الاوامر .
+    ⌔︙ اختر الامر الذي تريده من الازرار بلاسفل .
+]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
 {text = '- اوامر الحماية .', callback_data=msg.sender_user_id_.."/help1"},{text = '- اوامر الادمنية .', callback_data=msg.sender_user_id_.."/help2"},
-    },
-    {
-    {text = '- اوامر المدراء .', callback_data=msg.sender_user_id_.."/help3"},
-    },
-    {
-    {text = '- اوامر المنشئين .', callback_data=msg.sender_user_id_.."/help4"},{text = '- اوامر المطورين .', callback_data=msg.sender_user_id_.."/help5"},
-    },
-    {
-    {text = '- اوامر التعطيل .', callback_data=msg.sender_user_id_.."/homeaddrem"},{text = '- اوامر القفل .', callback_data=msg.sender_user_id_.."/homelocks"},
-    },
-    }
-    return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-    end
-    end
+},
+{
+{text = '- اوامر المدراء .', callback_data=msg.sender_user_id_.."/help3"},
+},
+{
+{text = '- اوامر المنشئين .', callback_data=msg.sender_user_id_.."/help4"},{text = '- اوامر المطورين .', callback_data=msg.sender_user_id_.."/help5"},
+},
+{
+{text = '- اوامر التعطيل .', callback_data=msg.sender_user_id_.."/homeaddrem"},{text = '- اوامر القفل .', callback_data=msg.sender_user_id_.."/homelocks"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+end
+
 if Text and Text:match('(.*)/lockdul') and Owner(data) then
 if tonumber(Text:match('(.*)/lockdul')) == tonumber(data.sender_user_id_) then
 local Textedit = '⌔︙ تم تعطيل التنزيل .'
@@ -8610,7 +8674,7 @@ keyboard.inline_keyboard = {
 {text = '- قفل الستكرات .', callback_data=msg.sender_user_id_.."/locksticar"},{text = '- فتح الستكرات .', callback_data=msg.sender_user_id_.."/unlocksticar"},
 },
 {
-{text = '- فتح المتحركة .', callback_data=msg.sender_user_id_.."/lockgif"},{text = '- فتح المتحركة .', callback_data=msg.sender_user_id_.."/unlockgif"},
+{text = '- قفل المتحركة .', callback_data=msg.sender_user_id_.."/lockgif"},{text = '- فتح المتحركة .', callback_data=msg.sender_user_id_.."/unlockgif"},
 },
 {
 {text = '- قفل الفيديو .', callback_data=msg.sender_user_id_.."/lockvideo"},{text = '- فتح الفيديو .', callback_data=msg.sender_user_id_.."/unlockvideo"},
