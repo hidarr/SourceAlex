@@ -4632,17 +4632,17 @@ send(msg.chat_id_, msg.id_,"◈︙ لا يمكنك تنزيل المطور ال�
 return false 
 end
 if database:sismember(bot_id.."Alex:Sudo:User",result.id_) then
-dev = "مطور -" else dev = "" end
+dev = "مطور " else dev = "" end
 if database:sismember(bot_id.."Alex:Basic:Constructor"..msg.chat_id_, result.id_) then
-crr = "منشئ اساسي -" else crr = "" end
+crr = "منشئ اساسي " else crr = "" end
 if database:sismember(bot_id.."Alex:Constructor"..msg.chat_id_, result.id_) then
-cr = "منشئ -" else cr = "" end
+cr = "منشئ " else cr = "" end
 if database:sismember(bot_id.."Alex:Manager"..msg.chat_id_, result.id_) then
-own = "مدير -" else own = "" end
+own = "مدير " else own = "" end
 if database:sismember(bot_id.."Alex:Mod:User"..msg.chat_id_, result.id_) then
-mod = "ادمن -" else mod = "" end
+mod = "مدير " else mod = "" end
 if database:sismember(bot_id.."Alex:Special:User"..msg.chat_id_, result.id_) then
-vip = "عضو مميز" else vip = ""
+vip = "عضو مميز " else vip = ""
 end
 if Rank_Checking(result.id_,msg.chat_id_) ~= false then
 send(msg.chat_id_, msg.id_,"\n◈︙ تم تنزيل الشخص من الرتب التالية .\n◈︙ { "..dev..""..crr..""..cr..""..own..""..mod..""..vip.." } .\n")
