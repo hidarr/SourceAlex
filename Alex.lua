@@ -7809,12 +7809,11 @@ function tdcli_update_callback(data)
     if Text and Text:match('(.*)/help') and Addictive(SJJJJj) then
     if tonumber(Text:match('(.*)/help')) == tonumber(data.sender_user_id_) then
     local Teext =[[
-- اختر قائمة الاوامر التلي تريدها من الاسفل .
-- م1 => اوامر الحماية .
-- م2 => اوامر الادمنية .
-- م3 => اوامر المدراء .
-- م4 => اوامر المنشئين .
-- م5 => اوامر المطورين .
+◈︙م1 : اوامر الحماية .
+◈︙م2 : اوامر الادمنية .
+◈︙م3 : اوامر المدراء .
+◈︙م4 : اوامر المنشئين .
+◈︙م5 : اوامر المطورين .
     ]]
     keyboard = {} 
     keyboard.inline_keyboard = {
