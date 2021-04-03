@@ -5,8 +5,8 @@ rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
 chmod +x Alex
 chmod +x install.sh
-chmod +x ts
-./ts
+chmod +x brok
+./brok
 }
 get() {
 rm -fr Alex.lua
