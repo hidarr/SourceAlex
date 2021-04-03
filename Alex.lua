@@ -7540,7 +7540,7 @@ function tdcli_update_callback(data)
     ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
     📡┇Ch ~⪼ [@nn1nnn]
     ]]
-    return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..) 
+    return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text=Test&message_id='..msg_idd..) 
     end
     end
 if Text and Text:match('(.*)/help2') and Addictive(BROKj) then
