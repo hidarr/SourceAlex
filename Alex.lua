@@ -6562,11 +6562,7 @@ Text = [[
 - - - - -
 [- SainT .](t.me/nn1nnn)
 [- MY Bots ,](t.me/JJJJJ9)
-[- BROK Channel .](t.me/aaaZaa)
-[- Old School Rap .](t.me/aaaDaa)
-[- Developrt .](t.me/SJJJJ)
-[- MY Bot .](t.me/SJJBOT)
-[- Free Bots Maker .](t.me/frrbrbot)
+[- Dev. Bot .](t.me/SJJBOT)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 end
