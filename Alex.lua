@@ -7743,38 +7743,34 @@ keyboard.inline_keyboard = {
 {
 {text = '- الاوامر الرئيسية .', callback_data=data.sender_user_id_.."/help"},
 },
-{
-{text = 'الاوامر الرئيسيه', callback_data=data.sender_user_id_.."/help"},
-},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 end
 if Text and Text:match('(.*)/help') and Addictive(BROKj) then
-if tonumber(Text:match('(.*)/help')) == tonumber(data.sender_user_id_) then
-local Teext =[[
-    ⌔︙ اهلا بك في قسم الاوامر .
-    ⌔︙ اختر الامر الذي تريده من الازرار بلاسفل .
-]]
+    if tonumber(Text:match('(.*)/help')) == tonumber(data.sender_user_id_) then
+    local Teext =[[
+        ⌔︙ اهلا بك في قسم الاوامر .
+        ⌔︙ اختر الامر الذي تريده من الازرار بلاسفل .
+    ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
 {text = '- اوامر الحماية .', callback_data=msg.sender_user_id_.."/help1"},{text = '- اوامر الادمنية .', callback_data=msg.sender_user_id_.."/help2"},
-},
-{
-{text = '- اوامر المدراء .', callback_data=msg.sender_user_id_.."/help3"},
-},
-{
-{text = '- اوامر المنشئين .', callback_data=msg.sender_user_id_.."/help4"},{text = '- اوامر المطورين .', callback_data=msg.sender_user_id_.."/help5"},
-},
-{
-{text = '- اوامر التعطيل .', callback_data=msg.sender_user_id_.."/homeaddrem"},{text = '- اوامر القفل .', callback_data=msg.sender_user_id_.."/homelocks"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-end
-
+    },
+    {
+    {text = '- اوامر المدراء .', callback_data=msg.sender_user_id_.."/help3"},
+    },
+    {
+    {text = '- اوامر المنشئين .', callback_data=msg.sender_user_id_.."/help4"},{text = '- اوامر المطورين .', callback_data=msg.sender_user_id_.."/help5"},
+    },
+    {
+    {text = '- اوامر التعطيل .', callback_data=msg.sender_user_id_.."/homeaddrem"},{text = '- اوامر القفل .', callback_data=msg.sender_user_id_.."/homelocks"},
+    },
+    }
+    return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+    end
+    end
 if Text and Text:match('(.*)/lockdul') and Owner(data) then
 if tonumber(Text:match('(.*)/lockdul')) == tonumber(data.sender_user_id_) then
 local Textedit = '⌔︙ تم تعطيل التنزيل .'
