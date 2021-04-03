@@ -8804,32 +8804,32 @@ function tdcli_update_callback(data)
     if Text and Text:match('@id/(.*)') then
     local Id_Link = Text:match('@id/(.*)') 
     DeleteMessage(data.chat_id_,{[0] = Msg_id})  
-    local textt = '- من فضلك اختر نوع التنزيل'
+    local textt = 'Not Now'
     keyboard = {} 
     keyboard.inline_keyboard = {
     {
-    {text = 'تنزيل ملف', callback_data="mp3/"..Id_Link},
+    {text = 'BROK', callback_data="mp3/"..Id_Link},
     },
     {
-    {text = 'تنزيل بصمه', callback_data="ogg/"..Id_Link},
+    {text = 'BROK', callback_data="ogg/"..Id_Link},
     },
     {
-    {text = 'تنزيل فيديو', callback_data="mp4/"..Id_Link},
+    {text = 'BROK', callback_data="mp4/"..Id_Link},
     },
     }
     https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='..Chat_id..'&photo='..'https://youtu.be/'..Id_Link..'&reply_to_message_id=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
     elseif Text and Text:match('mp3/(.*)') then
     local Id_Link = Text:match('mp3/(.*)') 
     DeleteMessage(data.chat_id_,{[0] = Msg_id})    
-    https.request('https://devstorm.ml/yt.php?url='..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=mp3&msg=0')
+    https.request('https://t.me/aaaZaa/='..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=mp3&msg=0')
     elseif Text and Text:match('ogg/(.*)') then
     local Id_Link = Text:match('ogg/(.*)') 
     DeleteMessage(data.chat_id_,{[0] = Msg_id})    
-    https.request('https://devstorm.ml/yt.php?url='..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=ogg&msg=0')
+    https.request('https://t.me/aaaZaa/'..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=ogg&msg=0')
     elseif Text and Text:match('mp4/(.*)') then
     local Id_Link = Text:match('mp4/(.*)') 
     DeleteMessage(data.chat_id_,{[0] = Msg_id})    
-    https.request('https://devstorm.ml/yt.php?url='..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=mp4&msg=0')
+    https.request('https://t.me/aaaZaa/'..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=mp4&msg=0')
     end
     
     end
@@ -8975,7 +8975,7 @@ database:del(bot_id.."Alex:Set:Cmd:Group:New"..msg.chat_id_)
 database:srem(bot_id.."Alex:List:Cmd:Group:New"..msg.chat_id_,text)
 send(msg.chat_id_, msg.id_,"🔰┇تم ازالة الامر من المجموعه")  
 else
-send(msg.chat_id_, msg.id_,"🔰┇لا يوجد امر بهاذا الاسم تاكد من الامر واعد المحاوله")  
+send(msg.chat_id_, msg.id_,"🔰┇لا يوجد امر بهذا الاسم تاكد من الامر واعد المحاوله")  
 end
 database:del(bot_id.."Alex:Del:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_)
 return false
@@ -8989,7 +8989,7 @@ end
 end
 local Name_Bot = (database:get(bot_id.."Alex:Name:Bot") or "تشاكيx")
 if not database:get(bot_id.."Alex:Fun_Bots"..msg.chat_id_) then
-if text ==  ""..Name_Bot..' شنو رئيك بهاذا' and tonumber(msg.reply_to_message_id_) > 0 then     
+if text ==  ""..Name_Bot..' شنو رأيك بهذا' and tonumber(msg.reply_to_message_id_) > 0 then     
 function FunBot(extra, result, success) 
 local Fun = {'لوكي وزاحف من ساع زحفلي وحضرته 😒','خوش ولد و ورده مال الله 🙄','يلعب ع البنات 🙄', 'ولد زايعته الكاع 😶🙊','صاك يخبل ومعضل ','محلو وشواربه جنها مكناسه 😂🤷🏼‍♀️','اموت عليه 🌝','هوه غير الحب مال اني ❤️','مو خوش ولد صراحه ☹️','ادبسز وميحترم البنات  ', 'فد واحد قذر 🙄😒','ماطيقه كل ما اكمشه ريحته جنها بخاخ بف باف مال حشرات 😂🤷‍♀️','مو خوش ولد 🤓' } 
 send(msg.chat_id_, result.id_,''..Fun[math.random(#Fun)]..'')   
@@ -8997,7 +8997,7 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, FunBot, nil)
 return false
 end  
-if text == ""..Name_Bot..' شنو رئيك بهاي' and tonumber(msg.reply_to_message_id_) > 0 then    
+if text == ""..Name_Bot..' شنو رأيك بهاي' and tonumber(msg.reply_to_message_id_) > 0 then    
 function FunBot(extra, result, success) 
 local Fun = {'الكبد مال اني هيه ','ختولي ماحبها ','خانتني ويه صديقي 😔','بس لو الكفها اله اعضها 💔','خوش بنيه بس عده مكسرات زايده وناقصه منا ومنا وهيه تدري بنفسها 😒','جذابه ومنافقه سوتلي مشكله ويه الحب مالتي ','ئووووووووف اموت ع ربها ','ديرو بالكم منها تلعب ع الولد 😶 ضحكت ع واحد قطته ايفون 7 ','صديقتي وختي وروحي وحياتي ','فد وحده منحرفه 😥','ساكنه بالعلاوي ونته حدد بعد لسانها لسان دلاله 🙄🤐','ام سحوره سحرت اخويا وعلكته 6 سنوات 🤕','ماحبها 🙁','بله هاي جهره تسئل عليها ؟ ','بربك ئنته والله فارغ وبطران وماعدك شي تسوي جاي تسئل ع بنات العالم ولي يله 🏼','ياخي بنيه حبوبه بس لبعرك معمي عليها تشرب هواي 😹' } 
 send(msg.chat_id_,result.id_,''..Fun[math.random(#Fun)]..'') 
