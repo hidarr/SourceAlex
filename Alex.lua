@@ -7501,7 +7501,6 @@ local Msg_id = data.message_id_
 local msg_idd = Msg_id/2097152/0.5
 local Text = data.payload_.data_
 if Text and Text:match('(.*)/help2') and Addictive(BROKj) then
-if tonumber(Text:match('(.*)/help2')) == tonumber(data.sender_user_id_) then
 local Teext =[[
     ⌔︙ قائمة اوامر الادمنية .
     - - - - -
@@ -7575,7 +7574,6 @@ keyboard.inline_keyboard = {
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
 end
 if Text and Text:match('(.*)/help3') and Owner(BROKj) then
 if tonumber(Text:match('(.*)/help3')) == tonumber(data.sender_user_id_) then
@@ -8021,6 +8019,7 @@ keyboard.inline_keyboard = {
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Texti)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
 end
 if Text and Text:match('(.*)/lockjoine') and Addictive(data) then
 if tonumber(Text:match('(.*)/lockjoine')) == tonumber(data.sender_user_id_) then
