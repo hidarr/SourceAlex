@@ -8458,7 +8458,7 @@ keyboard.inline_keyboard = {
     keyboard = {} 
     keyboard.inline_keyboard = {
     {
-    {text = '⌔︙ القائمة الرئيسية .', callback_data=data.sender_user_id_.."/homelocks"},
+    {text = 'القائمة الرئيسية', callback_data=data.sender_user_id_.."/homelocks"},
     },
     }
     return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Textedit)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -8683,6 +8683,452 @@ keyboard.inline_keyboard = {
 },
 {
 {text = '- قفل البوتات .', callback_data=msg.sender_user_id_.."/lockbots"},{text = '- فتح البوتات .', callback_data=msg.sender_user_id_.."/unlockbots"},
+},
+{
+{text = '- قفل الاشعارات .', callback_data=msg.sender_user_id_.."/locktags"},{text = '- فتح الاشعارات .', callback_data=msg.sender_user_id_.."/unlocktags"},
+},
+{
+{text = '- قفل التعديل .', callback_data=msg.sender_user_id_.."/lockedit"},{text = '- فتح التعديل .', callback_data=msg.sender_user_id_.."/unlockedit"},
+},
+{
+{text = '- قفل الروابط .', callback_data=msg.sender_user_id_.."/locklink"},{text = '- فتح الروابط .', callback_data=msg.sender_user_id_.."/unlocklink"},
+},
+{
+{text = '- قفل المعرفات .', callback_data=msg.sender_user_id_.."/lockusername"},{text = '- فتح المعرفات .', callback_data=msg.sender_user_id_.."/unlockusername"},
+},
+{
+{text = '- قفل التاك .', callback_data=msg.sender_user_id_.."/locktag"},{text = '- فتح التاك .', callback_data=msg.sender_user_id_.."/unlocktag"},
+},
+{
+{text = '- قفل الستكرات .', callback_data=msg.sender_user_id_.."/locksticar"},{text = '- فتح الستكرات .', callback_data=msg.sender_user_id_.."/unlocksticar"},
+},
+{
+{text = '- قفل المتحركة .', callback_data=msg.sender_user_id_.."/lockgif"},{text = '- فتح المتحركة .', callback_data=msg.sender_user_id_.."/unlockgif"},
+},
+{
+{text = '- قفل الفيديو .', callback_data=msg.sender_user_id_.."/lockvideo"},{text = '- فتح الفيديو .', callback_data=msg.sender_user_id_.."/unlockvideo"},
+},
+{
+{text = '- قفل الصور .', callback_data=msg.sender_user_id_.."/lockphoto"},{text = '- فتح الصور .', callback_data=msg.sender_user_id_.."/unlockphoto"},
+},
+{
+{text = '- قفل الاغاني .', callback_data=msg.sender_user_id_.."/lockvoise"},{text = '- فتح الاغاني .', callback_data=msg.sender_user_id_.."/unlockvoise"},
+},
+{
+{text = '- قفل الصوت .', callback_data=msg.sender_user_id_.."/lockaudo"},{text = '- فتح الصوت .', callback_data=msg.sender_user_id_.."/unlockaudo"},
+},
+{
+{text = '- قفل التوجيه .', callback_data=msg.sender_user_id_.."/lockfwd"},{text = '- فتح التوجيه .', callback_data=msg.sender_user_id_.."/unlockfwd"},
+},
+{
+{text = '- قفل الملفات .', callback_data=msg.sender_user_id_.."/lockfile"},{text = '- فتح الملفات .', callback_data=msg.sender_user_id_.."/unlockfile"},
+},
+{
+{text = '- قفل الجهات .', callback_data=msg.sender_user_id_.."/lockphone"},{text = '- فتح الجهات .', callback_data=msg.sender_user_id_.."/unlockphone"},
+},
+{
+{text = '- قفل الكلايش .', callback_data=msg.sender_user_id_.."/lockposts"},{text = '- فتح الكلايش .', callback_data=msg.sender_user_id_.."/unlockposts"},
+},
+{
+{text = '- قفل التكرار .', callback_data=msg.sender_user_id_.."/lockflood"},{text = '- فتح التكرار .', callback_data=msg.sender_user_id_.."/unlockflood"},
+},
+{
+{text = '- قفل الفارسية .', callback_data=msg.sender_user_id_.."/lockfarse"},{text = '- فتح الفارسية .', callback_data=msg.sender_user_id_.."/unlockfarse"},
+},
+{
+{text = '- قفل الفشار .', callback_data=msg.sender_user_id_.."/lockfshar"},{text = '- فتح الفشار .', callback_data=msg.sender_user_id_.."/unlockfshar"},
+},
+{
+{text = '- قفل الانلاين .', callback_data=msg.sender_user_id_.."/lockinlene"},{text = '- فتح الانلاين .', callback_data=msg.sender_user_id_.."/unlockinlene"},
+},
+{
+{text = '- رجوع .', callback_data=data.sender_user_id_.."/help"},
+},
+}
+    return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Texti)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+    end
+    end
+    if Text and Text:match('(%d+)/UnKed@(%d+):(%d+)') then
+    local ramsesadd = {string.match(Text,"^(%d+)/UnKed@(%d+):(%d+)$")}
+    if tonumber(ramsesadd[2]) == tonumber(ramsesadd[3]) then
+    if tonumber(ramsesadd[1]) == tonumber(data.sender_user_id_) then
+    DeleteMessage(data.chat_id_, {[0] = Msg_id})  
+    https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. data.chat_id_ .. "&user_id=" .. data.sender_user_id_ .. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
+    end
+    end
+    end
+    if Text and Text:match('@id/(.*)') then
+    local Id_Link = Text:match('@id/(.*)') 
+    DeleteMessage(data.chat_id_,{[0] = Msg_id})  
+    local textt = 'Not Now .'
+    keyboard = {} 
+    keyboard.inline_keyboard = {
+    {
+    {text = 'BROK', callback_data="mp3/"..Id_Link},
+    },
+    {
+    {text = 'BROK', callback_data="ogg/"..Id_Link},
+    },
+    {
+    {text = 'BROK', callback_data="mp4/"..Id_Link},
+    },
+    }
+    https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='..Chat_id..'&photo='..'https://youtu.be/'..Id_Link..'&reply_to_message_id=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+    elseif Text and Text:match('mp3/(.*)') then
+    local Id_Link = Text:match('mp3/(.*)') 
+    DeleteMessage(data.chat_id_,{[0] = Msg_id})    
+    https.request('https://t.me/aaaZaa/'..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=mp3&msg=0')
+    elseif Text and Text:match('ogg/(.*)') then
+    local Id_Link = Text:match('ogg/(.*)') 
+    DeleteMessage(data.chat_id_,{[0] = Msg_id})    
+    https.request('https://t.me/aaaZaa/'..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=ogg&msg=0')
+    elseif Text and Text:match('mp4/(.*)') then
+    local Id_Link = Text:match('mp4/(.*)') 
+    DeleteMessage(data.chat_id_,{[0] = Msg_id})    
+    https.request('https://t.me/aaaZaa/'..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=mp4&msg=0')
+    end
+    
+    end
+    
+    if data.ID == "UpdateChannel" then 
+    if data.channel_.status_.ID == "ChatMemberStatusKicked" then 
+    database:srem(bot_id..'Alex:Chek:Groups','-100'..data.channel_.id_)  
+    end
+    end
+    if (data.ID == "UpdateNewMessage") then
+    local msg = data.message_
+    local text = msg.content_.text_
+    if msg.date_ and msg.date_ < tonumber(os.time() - 30) then
+    print("OLD MESSAGE")
+    return false
+    end
+    if text == 'تعطيل التحقق' and Addictive(msg) then   
+    database:del(bot_id..'Alex:nwe:mem:group'..msg.chat_id_) 
+    send(msg.chat_id_, msg.id_,'\n⌔︙ تم تعطيل التحقق .' ) 
+    end
+    if text == 'تفعيل التحقق' and Addictive(msg) then  
+    database:set(bot_id..'Alex:nwe:mem:group'..msg.chat_id_,'true') 
+    send(msg.chat_id_, msg.id_,'\n⌔︙ تم تفعيل التحقق .' ) 
+    end 
+    
+    if msg.content_.ID == "MessageChatJoinByLink" and database:get(bot_id..'Alex:nwe:mem:group'..msg.chat_id_) == 'true'then
+    numphoto = {'3','8','9','6'}
+    numphotoid = numphoto[math.random(#numphoto)]
+    local numjoine = (numphotoid + 3)
+    local Texti = '⌔︙ اختر الاجابة الصحيحة .\n'..numphotoid..' + 3 ='
+    local num1 = (5 + numphotoid)
+    local num2 = (7 + numphotoid)
+    local num3 = (1 + numphotoid)
+    
+    keyboard = {} 
+    keyboard.inline_keyboard = {
+    {
+    {text = num1, callback_data=msg.sender_user_id_.."/lockjoine"},{text = num2, callback_data=msg.sender_user_id_.."/unlockjoine"},
+    },
+    {
+    {text =numjoine, callback_data=msg.sender_user_id_.."/UnKed@"..numjoine..":"..numjoine},{text = num3, callback_data=msg.sender_user_id_.."/unlockjoine"},
+    },
+    }
+    local msg_id = msg.id_/2097152/0.5
+    https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Texti).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+    https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..msg.sender_user_id_)
+    return false
+    end
+if msg.sender_user_id_ and Muted_Groups(msg.chat_id_,msg.sender_user_id_) then 
+DeleteMessage(msg.chat_id_, {[0] = msg.id_})  
+return false  
+end
+--------------------------------------------------------------------------------------------------------------
+if tonumber(msg.sender_user_id_) ~= tonumber(bot_id) then  
+if msg.sender_user_id_ and Ban_Groups(msg.chat_id_,msg.sender_user_id_) then 
+Kick_Group(msg.chat_id_,msg.sender_user_id_) 
+DeleteMessage(msg.chat_id_, {[0] = msg.id_}) 
+return false  
+end
+--------------------------------------------------------------------------------------------------------------
+if msg.content_ and msg.content_.members_ and msg.content_.members_[0] and msg.content_.members_[0].id_ and Ban_Groups(msg.chat_id_,msg.content_.members_[0].id_) then 
+Kick_Group(msg.chat_id_,msg.content_.members_[0].id_) 
+DeleteMessage(msg.chat_id_, {[0] = msg.id_}) 
+return false
+end
+--------------------------------------------------------------------------------------------------------------
+if msg.sender_user_id_ and Ban_All_Groups(msg.sender_user_id_) then 
+Kick_Group(msg.chat_id_,msg.sender_user_id_) 
+DeleteMessage(msg.chat_id_, {[0] = msg.id_}) 
+return false 
+end
+--------------------------------------------------------------------------------------------------------------
+if msg.content_ and msg.content_.members_ and msg.content_.members_[0] and msg.content_.members_[0].id_ and Ban_All_Groups(msg.content_.members_[0].id_) then 
+Kick_Group(msg.chat_id_,msg.content_.members_[0].id_) 
+DeleteMessage(msg.chat_id_, {[0] = msg.id_})  
+end 
+end
+------------------------------------------------------------------------
+if msg.content_.ID == "MessageChatDeletePhoto" or msg.content_.ID == "MessageChatChangePhoto" or msg.content_.ID == "MessagePinMessage" or msg.content_.ID == "MessageChatJoinByLink" or msg.content_.ID == "MessageChatAddMembers" or msg.content_.ID == "MessageChatChangeTitle" or msg.content_.ID == "MessageChatDeleteMember" then   
+if database:get(bot_id.."Alex:Lock:tagservr"..msg.chat_id_) then  
+DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
+return false
+end    
+end   
+if text and not database:sismember(bot_id..'Alex:Spam:Group'..msg.sender_user_id_,text) then
+database:del(bot_id..'Alex:Spam:Group'..msg.sender_user_id_) 
+end
+------------------------------------------------------------------------
+tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
+if data.username_ ~= false then
+database:set(bot_id..'Alex:User:Name'..msg.sender_user_id_,data.username_)
+end;end,nil)   
+------------------------------------------------------------------------
+if msg.content_.ID == "MessageChatAddMembers" then  
+database:set(bot_id.."Alex:Who:Added:Me"..msg.chat_id_..":"..msg.content_.members_[0].id_,msg.sender_user_id_)
+local mem_id = msg.content_.members_  
+local Bots = database:get(bot_id.."Alex:Lock:Bot:kick"..msg.chat_id_) 
+for i=0,#mem_id do  
+if msg.content_.members_[i].type_.ID == "UserTypeBot" and not Addictive(msg) and Bots == "kick" then   
+https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..msg.sender_user_id_)
+Get_Info = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
+local Json_Info = JSON.decode(Get_Info)
+if Json_Info.ok == true and #mem_id == i then
+local Msgs = {}
+Msgs[0] = msg.id_
+msgs_id = msg.id_-1048576
+for i=1 ,(150) do 
+msgs_id = msgs_id+1048576
+table.insert(Msgs,msgs_id)
+end
+tdcli_function ({ID = "GetMessages",chat_id_ = msg.chat_id_,message_ids_ = Msgs},function(arg,data);MsgsDel = {};for i=0 ,data.total_count_ do;if not data.messages_[i] then;if not MsgsDel[0] then;MsgsDel[0] = Msgs[i];end;table.insert(MsgsDel,Msgs[i]);end;end;if MsgsDel[0] then;tdcli_function({ID="DeleteMessages",chat_id_ = arg.chat_id_,message_ids_=MsgsDel},function(arg,data)end,nil);end;end,{chat_id_=msg.chat_id_}) tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersBots"},offset_ = 0,limit_ = 100 },function(arg,tah) local admins = tah.members_ for i=0 , #admins do if tah.members_[i].status_.ID ~= "ChatMemberStatusEditor" and not is_Addictive(msg) then tdcli_function ({ID = "ChangeChatMemberStatus",chat_id_ = msg.chat_id_,user_id_ = admins[i].user_id_,status_ = {ID = "ChatMemberStatusKicked"},}, function(arg,f) end, nil) end end end,nil)  
+end
+end     
+end
+end
+--------------------------------------------------------------------------------------------------------------
+if msg.content_.ID == "MessageChatAddMembers" then  
+local mem_id = msg.content_.members_  
+local Bots = database:get(bot_id.."Alex:Lock:Bot:kick"..msg.chat_id_) 
+for i=0,#mem_id do  
+if msg.content_.members_[i].type_.ID == "UserTypeBot" and not Addictive(msg) and Bots == "del" then   
+Get_Info = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
+local Json_Info = JSON.decode(Get_Info)
+if Json_Info.ok == true and #mem_id == i then
+local Msgs = {}
+Msgs[0] = msg.id_
+msgs_id = msg.id_-1048576
+for i=1 ,(150) do 
+msgs_id = msgs_id+1048576
+table.insert(Msgs,msgs_id)
+end
+tdcli_function ({ID = "GetMessages",chat_id_ = msg.chat_id_,message_ids_ = Msgs},function(arg,data);MsgsDel = {};for i=0 ,data.total_count_ do;if not data.messages_[i] then;if not MsgsDel[0] then;MsgsDel[0] = Msgs[i];end;table.insert(MsgsDel,Msgs[i]);end;end;if MsgsDel[0] then;tdcli_function({ID="DeleteMessages",chat_id_ = arg.chat_id_,message_ids_=MsgsDel},function(arg,data)end,nil);end;end,{chat_id_=msg.chat_id_}) tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersBots"},offset_ = 0,limit_ = 100 },function(arg,tah) local admins = tah.members_ for i=0 , #admins do if tah.members_[i].status_.ID ~= "ChatMemberStatusEditor" and not is_Addictive(msg) then tdcli_function ({ID = "ChangeChatMemberStatus",chat_id_ = msg.chat_id_,user_id_ = admins[i].user_id_,status_ = {ID = "ChatMemberStatusKicked"},}, function(arg,f) end, nil) end end end,nil)  
+end
+end     
+end
+end
+------------------------------------------------------------------------
+if text and database:get(bot_id.."Alex:Del:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_) == "true" then
+local NewCmmd = database:get(bot_id.."Alex:Set:Cmd:Group:New1"..msg.chat_id_..":"..text)
+if NewCmmd then
+database:del(bot_id.."Alex:Set:Cmd:Group:New1"..msg.chat_id_..":"..text)
+database:del(bot_id.."Alex:Set:Cmd:Group:New"..msg.chat_id_)
+database:srem(bot_id.."Alex:List:Cmd:Group:New"..msg.chat_id_,text)
+send(msg.chat_id_, msg.id_,"🔰┇تم ازالة الامر من المجموعه")  
+else
+send(msg.chat_id_, msg.id_,"🔰┇لا يوجد امر بهاذا الاسم تاكد من الامر واعد المحاوله")  
+end
+database:del(bot_id.."Alex:Del:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_)
+return false
+end
+------------------------------------------------------------------------
+if data.message_.content_.text_ then
+local NewCmmd = database:get(bot_id.."Alex:Set:Cmd:Group:New1"..msg.chat_id_..":"..data.message_.content_.text_)
+if NewCmmd then
+data.message_.content_.text_ = (NewCmmd or data.message_.content_.text_)
+end
+end
+local Name_Bot = (database:get(bot_id.."Alex:Name:Bot") or "تشاكيx")
+if not database:get(bot_id.."Alex:Fun_Bots"..msg.chat_id_) then
+if text ==  ""..Name_Bot..' شنو رئيك بهاذا' and tonumber(msg.reply_to_message_id_) > 0 then     
+function FunBot(extra, result, success) 
+local Fun = {'لوكي وزاحف من ساع زحفلي وحضرته 😒','خوش ولد و ورده مال الله 🙄','يلعب ع البنات 🙄', 'ولد زايعته الكاع 😶🙊','صاك يخبل ومعضل ','محلو وشواربه جنها مكناسه 😂🤷🏼‍♀️','اموت عليه 🌝','هوه غير الحب مال اني ❤️','مو خوش ولد صراحه ☹️','ادبسز وميحترم البنات  ', 'فد واحد قذر 🙄😒','ماطيقه كل ما اكمشه ريحته جنها بخاخ بف باف مال حشرات 😂🤷‍♀️','مو خوش ولد 🤓' } 
+send(msg.chat_id_, result.id_,''..Fun[math.random(#Fun)]..'')   
+end   
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, FunBot, nil)
+return false
+end  
+if text == ""..Name_Bot..' شنو رئيك بهاي' and tonumber(msg.reply_to_message_id_) > 0 then    
+function FunBot(extra, result, success) 
+local Fun = {'الكبد مال اني هيه ','ختولي ماحبها ','خانتني ويه صديقي 😔','بس لو الكفها اله اعضها 💔','خوش بنيه بس عده مكسرات زايده وناقصه منا ومنا وهيه تدري بنفسها 😒','جذابه ومنافقه سوتلي مشكله ويه الحب مالتي ','ئووووووووف اموت ع ربها ','ديرو بالكم منها تلعب ع الولد 😶 ضحكت ع واحد قطته ايفون 7 ','صديقتي وختي وروحي وحياتي ','فد وحده منحرفه 😥','ساكنه بالعلاوي ونته حدد بعد لسانها لسان دلاله 🙄🤐','ام سحوره سحرت اخويا وعلكته 6 سنوات 🤕','ماحبها 🙁','بله هاي جهره تسئل عليها ؟ ','بربك ئنته والله فارغ وبطران وماعدك شي تسوي جاي تسئل ع بنات العالم ولي يله 🏼','ياخي بنيه حبوبه بس لبعرك معمي عليها تشرب هواي 😹' } 
+send(msg.chat_id_,result.id_,''..Fun[math.random(#Fun)]..'') 
+end  
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, FunBot, nil)
+return false
+end    
+end
+if text and text:match('^'..Name_Bot..' ') then
+data.message_.content_.text_ = data.message_.content_.text_:gsub('^'..Name_Bot..' ','')
+end
+------------------------------------------------------------------------
+Alex_Started_Bot(msg,data)
+Alex_Files(msg)
+elseif (data.ID == "UpdateMessageEdited") then
+local msg = data
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.message_id_)},function(extra, result, success)
+database:incr(bot_id..'Alex:message_edit'..result.chat_id_..result.sender_user_id_)
+local Text = result.content_.text_
+if database:get(bot_id.."Alex:Lock:edit"..msg.chat_id_) and not Text and not BasicConstructor(result) then
+Reply_Status(result,result.sender_user_id_,"reply","📬┇قام بالتعديل على الميديا")  
+DeleteMessage(result.chat_id_,{[0] = data.message_id_}) 
+end
+local text = result.content_.text_
+if not Addictive(result) then
+------------------------------------------------------------------------
+if text and text:match("[Jj][Oo][Ii][Nn][Cc][Hh][Aa][Tt]") or text and text:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]") or text and text:match("[Tt].[Mm][Ee]") or text and text:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]") or text and text:match("[Tt][Ee][Ll][Ee][Ss][Cc][Oo].[Pp][Ee]") then
+if database:get(bot_id.."Alex:Lock:Link"..msg.chat_id_) then
+DeleteMessage(result.chat_id_,{[0] = data.message_id_}) 
+return false
+end 
+end
+------------------------------------------------------------------------
+if text and text:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]") or text and text:match("[Tt].[Mm][Ee]") or text and text:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]") or text and text:match("[Tt][Ee][Ll][Ee][Ss][Cc][Oo].[Pp][Ee]") then
+if database:get(bot_id.."Alex:Lock:Link"..msg.chat_id_) then
+DeleteMessage(result.chat_id_,{[0] = data.message_id_}) 
+return false
+end 
+end
+------------------------------------------------------------------------
+if text and text:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]") or text and text:match("[Tt].[Mm][Ee]") or text and text:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]") or text and text:match("[Tt][Ee][Ll][Ee][Ss][Cc][Oo].[Pp][Ee]") then
+if database:get(bot_id.."Alex:Lock:Link"..msg.chat_id_) then
+DeleteMessage(result.chat_id_,{[0] = data.message_id_}) 
+return false
+end  
+end
+------------------------------------------------------------------------
+if text and text:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]") or text and text:match("[Tt].[Mm][Ee]") or text and text:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]") or text and text:match("[Tt][Ee][Ll][Ee][Ss][Cc][Oo].[Pp][Ee]") then
+if database:get(bot_id.."Alex:Lock:Link"..msg.chat_id_) then
+DeleteMessage(result.chat_id_,{[0] = data.message_id_}) 
+return false
+end  
+end 
+------------------------------------------------------------------------
+if text and text:match("[hH][tT][tT][pP][sT]") or text and text:match("[tT][eE][lL][eE][gG][rR][aA].[Pp][Hh]") or text and text:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa].[Pp][Hh]") then
+if database:get(bot_id.."Alex:Lock:Link"..msg.chat_id_) then
+DeleteMessage(result.chat_id_,{[0] = data.message_id_}) 
+return false
+end  
+end 
+------------------------------------------------------------------------
+if text and text:match("(.*)(@)(.*)") then
+if database:get(bot_id.."Alex:Lock:User:Name"..msg.chat_id_) then
+DeleteMessage(result.chat_id_,{[0] = data.message_id_}) 
+return false
+end  
+end
+------------------------------------------------------------------------
+if text and text:match("@") then
+if database:get(bot_id.."Alex:Lock:User:Name"..msg.chat_id_) then
+DeleteMessage(result.chat_id_,{[0] = data.message_id_}) 
+return false
+end  
+end 
+------------------------------------------------------------------------
+if text and text:match("(.*)(#)(.*)") then
+if database:get(bot_id.."Alex:Lock:hashtak"..msg.chat_id_) then
+DeleteMessage(result.chat_id_,{[0] = data.message_id_}) 
+return false
+end  
+end 
+------------------------------------------------------------------------
+if text and text:match("#") then
+if database:get(bot_id.."Alex:Lock:hashtak"..msg.chat_id_) then
+DeleteMessage(result.chat_id_,{[0] = data.message_id_}) 
+return false
+end  
+end 
+------------------------------------------------------------------------
+if text and text:match("/") then
+if database:get(bot_id.."Alex:Lock:Cmd"..msg.chat_id_) then
+DeleteMessage(result.chat_id_,{[0] = data.message_id_}) 
+return false
+end 
+end 
+if text and text:match("(.*)(/)(.*)") then
+if database:get(bot_id.."Alex:Lock:Cmd"..msg.chat_id_) then
+DeleteMessage(result.chat_id_,{[0] = data.message_id_}) 
+return false
+end 
+end
+------------------------------------------------------------------------
+if text then
+local Alex_Msg = database:get(bot_id.."Alex:Add:Filter:Rp2"..text..result.chat_id_)   
+if Alex_Msg then    
+Reply_Status(result,result.sender_user_id_,"reply","📬┇"..Alex_Msg)  
+DeleteMessage(result.chat_id_, {[0] = data.message_id_})     
+return false
+end
+end
+end
+end,nil)
+------------------------------------------------------------------------
+elseif (data.ID == "UpdateMessageSendSucceeded") then
+local msg = data.message_
+local text = msg.content_.text_
+local Get_Msg_Pin = database:get(bot_id..'Alex:Msg:Pin:Chat'..msg.chat_id_)
+if Get_Msg_Pin ~= nil then
+if text == Get_Msg_Pin then
+tdcli_function ({ID = "PinChannelMessage",channel_id_ = msg.chat_id_:gsub('-100',''),message_id_ = msg.id_,disable_notification_ = 0},function(arg,d) if d.ID == 'Ok' then;database:del(bot_id..'Alex:Msg:Pin:Chat'..msg.chat_id_);end;end,nil)   
+elseif (msg.content_.sticker_) then 
+if Get_Msg_Pin == msg.content_.sticker_.sticker_.persistent_id_ then
+tdcli_function ({ID = "PinChannelMessage",channel_id_ = msg.chat_id_:gsub('-100',''),message_id_ = msg.id_,disable_notification_ = 0},function(arg,d) database:del(bot_id..'Alex:Msg:Pin:Chat'..msg.chat_id_) end,nil)   
+end
+end
+if (msg.content_.animation_) then 
+if msg.content_.animation_.animation_.persistent_id_ == Get_Msg_Pin then
+tdcli_function ({ID = "PinChannelMessage",channel_id_ = msg.chat_id_:gsub('-100',''),message_id_ = msg.id_,disable_notification_ = 0},function(arg,d) database:del(bot_id..'Alex:Msg:Pin:Chat'..msg.chat_id_) end,nil)   
+end
+end
+if (msg.content_.photo_) then
+if msg.content_.photo_.sizes_[0] then
+id_photo = msg.content_.photo_.sizes_[0].photo_.persistent_id_
+end
+if msg.content_.photo_.sizes_[1] then
+id_photo = msg.content_.photo_.sizes_[1].photo_.persistent_id_
+end
+if msg.content_.photo_.sizes_[2] then
+id_photo = msg.content_.photo_.sizes_[2].photo_.persistent_id_
+end	
+if msg.content_.photo_.sizes_[3] then
+id_photo = msg.content_.photo_.sizes_[3].photo_.persistent_id_
+end
+if id_photo == Get_Msg_Pin then
+tdcli_function ({ID = "PinChannelMessage",channel_id_ = msg.chat_id_:gsub('-100',''),message_id_ = msg.id_,disable_notification_ = 0},function(arg,d) database:del(bot_id..'Alex:Msg:Pin:Chat'..msg.chat_id_) end,nil)   
+end
+end
+end
+end
+if (data.ID == "UpdateOption" and data.value_.value_ == "Ready") then
+print('\27[30;32m»» يرجى الاننتضار لحين تنظيف المجموعات الوهميه ««\n\27[1;37m')
+local list = database:smembers(bot_id..'Alex:UsersBot')  
+for k,v in pairs(list) do 
+tdcli_function({ID='GetChat',chat_id_ = v},function(arg,data) end,nil) 
+end 
+local list = database:smembers(bot_id..'Alex:Chek:Groups') 
+for k,v in pairs(list) do 
+tdcli_function({ID='GetChat',chat_id_ = v},function(arg,data)
+if data and data.type_ and data.type_.channel_ and data.type_.channel_.status_ and data.type_.channel_.status_.ID == "ChatMemberStatusMember" then
+tdcli_function ({ID = "ChangeChatMemberStatus",chat_id_=v,user_id_=bot_id,status_={ID = "ChatMemberStatusLeft"},},function(e,g) end, nil) 
+database:srem(bot_id..'Alex:Chek:Groups',v)  
+end
+if data and data.type_ and data.type_.channel_ and data.type_.channel_.status_ and data.type_.channel_.status_.ID == "ChatMemberStatusLeft" then
+database:srem(bot_id..'Alex:Chek:Groups',v)  
+end
+if data and data.type_ and data.type_.channel_ and data.type_.channel_.status_ and data.type_.channel_.status_.ID == "ChatMemberStatusKicked" then
+database:srem(bot_id..'Alex:Chek:Groups',v)  
+end
+if data and data.code_ and data.code_ == 400 then
+database:srem(bot_id..'Alex:Chek:Groups',v)   
+end
+if data and data.type_ and data.type_.channel_ and data.type_.channel_.status_ and data.type_.channel_.status_.ID == "ChatMemberStatusEditor" then
+database:sadd(bot_id..'Alex:Chek:Groups',v)  
+end end,nil)
+end;end;enda=msg.sender_user_id_.."/unlockbots"},
 },
 {
 {text = '- قفل الاشعارات .', callback_data=msg.sender_user_id_.."/locktags"},{text = '- فتح الاشعارات .', callback_data=msg.sender_user_id_.."/unlocktags"},
