@@ -7498,13 +7498,13 @@ end --- Chat_Type = 'UserBot'
 end
 end
 function tdcli_update_callback(data)
-if data.ID == "UpdateNewCallbackQuery" then
-BROKj = data
-local Chat_id = data.chat_id_
-local Msg_id = data.message_id_
-local msg_idd = Msg_id/2097152/0.5
-local Text = data.payload_.data_
-if Text and Text:match('(.*)/help1') and Addictive(BROKj) then
+    if data.ID == "UpdateNewCallbackQuery" then
+    tahaj = data
+    local Chat_id = data.chat_id_
+    local Msg_id = data.message_id_
+    local msg_idd = Msg_id/2097152/0.5
+    local Text = data.payload_.data_
+    if Text and Text:match('(.*)/help1') and Addictive(tahaj) then
     if tonumber(Text:match('(.*)/help1')) == tonumber(data.sender_user_id_) then
     local Teext =[[
     📮┇ اوامر حمايه المجموعه
