@@ -6407,7 +6407,7 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n◈︙ اهلا بك في قائمة ملفات سورس الكس .\n◈︙ الملفات الموجودة .\n- - - - -\n\n"
+local TextS = "\n◈︙ اهلا بك في قائمة ملفات سورس ديلار .\n◈︙ الملفات الموجودة .\n- - - - -\n\n"
 local TextE = "\n- - - - -\n◈︙ علامة الصح تعني الملف مفعل .\n".."◈︙ علامة الخطأ تعني الملف تعطل .\n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
@@ -6564,13 +6564,13 @@ keyboard = {}
 keyboard.inline_keyboard = {
 
 {
-{text = '- Source Alex .', url = "https://t.me/Dilar6"}
+{text = '- Sorce Dilar .', url = "https://t.me/Dilar6"}
 },
 {
-{text = '- SainT .', url = "https://t.me/nn1nnn"}
+{text = '- An .', url = "https://t.me/LLLLTT"}
 },
 {
-{text = '- MY BOT .', url = "https://t.me/SJJBOT"}
+{text = '-  BOT Sorce.', url = "https://t.me/Df8oBot"}
 },
 }
 local msg_id = msg.id_/2097152/0.5
