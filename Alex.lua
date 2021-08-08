@@ -134,9 +134,9 @@ end
 return var
 end 
 function Get_Rank(user_id,chat_id)
-if tonumber(user_id) == tonumber(1753144681) then  
+if tonumber(user_id) == tonumber(1099083018) then  
 var = "مطور السورس"
-elseif tonumber(user_id) == tonumber(633004612) then  
+elseif tonumber(user_id) == tonumber(1099083018) then  
 var = "مطور السورس"
 elseif DevAlexe(user_id) == true then
 var = "المطور الاساسي"  
@@ -6286,8 +6286,8 @@ if text == ("تحديث السورس") and DevAlex(msg) then
 send(msg.chat_id_,msg.id_,'◈︙ تم تحديث السورس .')
 os.execute('rm -rf Alex.lua')
 os.execute('rm -rf start.lua')
-download_to_file('https://raw.githubusercontent.com/SourceAlex/SourceAlex/master/Alex.lua', 'Alex.lua') 
-download_to_file('https://raw.githubusercontent.com/SourceAlex/SourceAlex/master/start.lua', 'start.lua') 
+download_to_file('https://raw.githubusercontent.com/SorceLink/SourceAlex/master/Alex.lua', 'Alex.lua') 
+download_to_file('https://raw.githubusercontent.com/SorceLink/SourceAlex/master/start.lua', 'start.lua') 
 dofile('Alex.lua')  
 return false
 end
@@ -6557,14 +6557,14 @@ send(msg.chat_id_, msg.id_, "◈︙ تم التحديث بنجاح .")
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then
 local Text =[[
-◈︙Source Alex .
+◈︙Source Dilar .
 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 
 {
-{text = '- Source Alex .', url = "https://t.me/JJJJJ9"}
+{text = '- Source Alex .', url = "https://t.me/Dilar6"}
 },
 {
 {text = '- SainT .', url = "https://t.me/nn1nnn"}
@@ -6603,7 +6603,7 @@ keyboard.inline_keyboard = {
 {text = '- اوامر التعطيل .', callback_data=msg.sender_user_id_.."/homeaddrem"},{text = '- اوامر القفل .', callback_data=msg.sender_user_id_.."/homelocks"},
 },
 {
-{text = '- Source Alex .', url = "https://t.me/JJJJJ9"}
+{text = '- Sorce Dilar .', url = "https://t.me/Dilar6"}
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -6923,7 +6923,7 @@ keyboard.inline_keyboard = {
 {text = '- تعطيل الردود .', callback_data=msg.sender_user_id_..msg.sender_user_id_.."/lockrepgr"},{text = '- تفعيل الردود .', callback_data=msg.sender_user_id_.."/unlockrepgr"},
 },
 {
-{text = '- Source Alex .', url = "https://t.me/JJJJJ9"}
+{text = '- Sorce Dilar .', url = "https://t.me/Dilar6"}
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -7496,8 +7496,8 @@ if text == "◈︙ تحديث السورس ." then
 send(msg.chat_id_,msg.id_,'◈︙ تم تحديث السورس .')
 os.execute('rm -rf Alex.lua')
 os.execute('rm -rf start.lua')
-download_to_file('https://raw.githubusercontent.com/SourceAlex/SourceAlex/master/Alex.lua', 'Alex.lua') 
-download_to_file('https://raw.githubusercontent.com/SourceAlex/SourceAlex/master/start.lua', 'start.lua') 
+download_to_file('https://raw.githubusercontent.com/SorceLink/SourceAlex/master/Alex.lua', 'Alex.lua') 
+download_to_file('https://raw.githubusercontent.com/SorceLink/SourceAlex/master/start.lua', 'start.lua') 
 dofile('Alex.lua')  
 return false
 end
@@ -7567,7 +7567,7 @@ function tdcli_update_callback(data)
     {text = 'الاوامر الرئيسية', callback_data=data.sender_user_id_.."/help"},
     },
     {
-{text = '- Source Alex .', url = "https://t.me/JJJJJ9"}
+{text = '- Sorce Dilar .', url = "https://t.me/Dilar6"}
 },
     }
     return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -7647,7 +7647,7 @@ function tdcli_update_callback(data)
     {text = 'الاوامر الرئيسية', callback_data=data.sender_user_id_.."/help"},
     },
     {
-{text = '- Source Alex .', url = "https://t.me/JJJJJ9"}
+{text = '- Sorce Dilar .', url = "https://t.me/Dilar6"}
 },
     }
     return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -7700,7 +7700,7 @@ function tdcli_update_callback(data)
     {text = 'الاوامر الرئيسية', callback_data=data.sender_user_id_.."/help"},
     },
     {
-{text = '- Source Alex .', url = "https://t.me/JJJJJ9"}
+{text = '- Sorce Dilar .', url = "https://t.me/Dilar6"}
 },
     }
     return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -7742,7 +7742,7 @@ function tdcli_update_callback(data)
     {text = 'الاوامر الرئيسية', callback_data=data.sender_user_id_.."/help"},
     },
     {
-{text = '- Source Alex .', url = "https://t.me/JJJJJ9"}
+{text = '- Sorce Dilar .', url = "https://t.me/JJJJJ9"}
 },
     }
     return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -7800,7 +7800,7 @@ function tdcli_update_callback(data)
     {text = 'الاوامر الرئيسية', callback_data=data.sender_user_id_.."/help"},
     },
     {
-{text = '- Source Alex .', url = "https://t.me/JJJJJ9"}
+{text = '- Sorce Dilar .', url = "https://t.me/Dilar6"}
 },
     }
     return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -7830,7 +7830,7 @@ function tdcli_update_callback(data)
     {text = 'اوامر التعطيل', callback_data=data.sender_user_id_.."/homeaddrem"},{text = 'اوامر القفل', callback_data=data.sender_user_id_.."/homelocks"},
     },
     {
-{text = '- Source Alex .', url = "https://t.me/JJJJJ9"}
+{text = '- Sorce Dilar .', url = "https://t.me/Dilar6"}
 },
     }
     return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -8145,7 +8145,7 @@ function tdcli_update_callback(data)
     {text = 'رجوع', callback_data=data.sender_user_id_.."/help"},
     },
     {
-{text = '- Source Alex .', url = "https://t.me/JJJJJ9"}
+{text = '- Sorce Dilar .', url = "https://t.me/Dilar6"}
 },
     }
     return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Texti)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -8785,7 +8785,7 @@ function tdcli_update_callback(data)
     {text = 'رجوع', callback_data=data.sender_user_id_.."/help"},
     },
     {
-{text = '- Source Alex .', url = "https://t.me/JJJJJ9"}
+{text = '- Sorce Dilar .', url = "https://t.me/JJJJJ9"}
 },
     }
     return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Texti)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
