@@ -536,6 +536,35 @@ end;end;end
 send(chat,msg.id_,"◈︙ تم رفع الملف بنجاح وتم استعادة كل الاحصائيات السابقة .")   
 end
 
+if MsgText[1] == "@all" then
+if not msg.Admin then return "هذا الامر يخص {الادمن,المدير,المنشئ,المالك,المطور} فقط \n" end
+tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(argg,dataa) 
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = dataa.member_count_},function(ta,datate)
+x = 0
+tags = 0
+local list = datate.members_ 
+for k, v in pairs(list) do
+tdcli_function({ID="GetUser",user_id_ = v.user_id_},function(arg,data)
+if x == 5 or x == tags or k == 0 then
+tags = x + 5
+t = "#all"
+end
+x = x + 1
+tagname = data.first_name_
+tagname = tagname:gsub("]","")
+tagname = tagname:gsub("[[]","")
+t = t..", ["..tagname.."](tg://user?id="..v.user_id_..")"
+if x == 5 or x == tags or k == 0 then
+local Text = t:gsub(',','\n')
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..Token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown")
+end
+end,nil)
+end
+end,nil)
+end,nil)
+end
+
 function Is_Not_Spam(msg,type)
 if type == "kick" then 
 Reply_Status(msg,msg.sender_user_id_,"reply","◈︙ قام بالتكرار وتم طرده .")  
