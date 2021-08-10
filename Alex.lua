@@ -3078,6 +3078,19 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/koko12300/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
+if($text == "صورتي" || $text == "افتاري" ){
+$result = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getUserProfilePhotos?user_id=$from_id"),true);
+$file_id = $result["result"]["photos"][0][0]["file_id"];
+$count = $result["result"]["total_count"];
+bot('sendphoto',[
+'chat_id'=>$chat_id,
+'photo'=>$file_id,
+'caption'=>"• عدد صورك الكلي هو : ".$count,
+'reply_to_message_id'=>$message->message_id,
+]);
+}
+end
+
 if text and text:match("^حظر (%d+)$") and Addictive(msg) then
 local userid = text:match("^حظر (%d+)$") 
 if not Constructor(msg) and database:get(bot_id.."Ban:Cheking"..msg.chat_id_) then 
