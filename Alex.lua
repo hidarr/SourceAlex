@@ -6656,7 +6656,7 @@ keyboard.inline_keyboard = {
 {text = '- قفل الانلاين .', callback_data=msg.sender_user_id_.."/lockinlene"},{text = '- فتح الانلاين .', callback_data=msg.sender_user_id_.."/unlockinlene"},
 },
 {
-{text = '- Source Alex .', url = "https://t.me/JJJJJ9"}
+{text = '- Source Dilar .', url = "https://t.me/Dilar6"}
 },
 }
 local msg_id = msg.id_/2097152/0.5
