@@ -139,7 +139,7 @@ var = "مطور السورس"
 elseif tonumber(user_id) == tonumber(1099083018) then  
 var = "مطور السورس"
 elseif DevAlexe(user_id) == true then
-var = "المطور الاساسي"  
+var = "Carbon"  
 elseif tonumber(user_id) == tonumber(bot_id) then  
 var = "البوت"
 elseif database:sismember(bot_id.."Alex:Sudo:User", user_id) then
